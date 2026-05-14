@@ -7,6 +7,9 @@ export function initMemories() {
   const track = document.querySelector('[data-memoria-track]');
   const prev = document.querySelector('.memoria-prev');
   const next = document.querySelector('.memoria-next');
+  const tratoracoTrack = document.querySelector('[data-tratoraco-track]');
+  const tratoracoPrev = document.querySelector('.tratoraco-prev');
+  const tratoracoNext = document.querySelector('.tratoraco-next');
 
   if (!modal || !content) return;
 
@@ -59,5 +62,24 @@ export function initMemories() {
 
   next?.addEventListener('click', () => {
     track?.scrollBy({ left: 360, behavior: 'smooth' });
+  });
+
+  function tratoracoScrollStep() {
+    const w = tratoracoTrack?.clientWidth ?? 360;
+    return Math.max(280, Math.round(w * 0.82));
+  }
+
+  tratoracoPrev?.addEventListener('click', () => {
+    tratoracoTrack?.scrollBy({
+      left: -tratoracoScrollStep(),
+      behavior: 'smooth',
+    });
+  });
+
+  tratoracoNext?.addEventListener('click', () => {
+    tratoracoTrack?.scrollBy({
+      left: tratoracoScrollStep(),
+      behavior: 'smooth',
+    });
   });
 }
