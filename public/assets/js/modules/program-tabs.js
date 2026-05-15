@@ -11,4 +11,14 @@ export function initProgramTabs() {
     document.getElementById(id)?.classList.add('active');
     button?.classList.add('active');
   };
+
+  document.querySelector('.prog-tabs')?.addEventListener('click', (e) => {
+    const btn = e.target.closest('.prog-tab');
+    if (!btn || !e.currentTarget.contains(btn)) return;
+
+    const id = btn.getAttribute('data-tab');
+    if (!id) return;
+
+    window.showTab(id, btn);
+  });
 }

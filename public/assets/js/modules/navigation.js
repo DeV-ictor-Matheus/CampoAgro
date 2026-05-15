@@ -1,5 +1,6 @@
 export function initNavigation() {
   const nav = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
   const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
   const sections = links
     .map((link) => document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1))))
@@ -26,6 +27,10 @@ export function initNavigation() {
   window.toggleMenu = () => {
     nav?.classList.toggle('menu-open');
   };
+
+  hamburger?.addEventListener('click', () => {
+    nav?.classList.toggle('menu-open');
+  });
 
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href^="#"]');

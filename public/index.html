@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Edição principal da home no Next: app/_components/HomeLanding.tsx. Este arquivo permanece para deploy estático opcional. -->
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -7,16 +8,16 @@
     <meta name="keywords" content="CampoAgro, CampoAgro 2026, agronegócio, Campo do Tenente, Paraná, feira agropecuária, agricultura familiar, Tratoraço, shows" />
     <meta name="theme-color" content="#040404" />
     <title>CampoAgro 2026 | Plantando na terra a semente do futuro</title>
-    <link rel="icon" href="assets/img/logo-campoagro.png" type="image/png" />
+    <link rel="icon" href="/assets/img/logo-campoagro.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/premium.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/premium.css" />
   </head>
   <body>
     <div id="loading" aria-label="Carregando CampoAgro">
-      <img class="loading-logo" src="assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" />
+      <img class="loading-logo" src="/assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" />
       <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
       <p>Campo do Tenente · PR · 2026</p>
     </div>
@@ -25,7 +26,7 @@
 
     <nav id="navbar" aria-label="Navegação principal">
       <a href="#home" class="nav-brand" aria-label="CampoAgro 2026 - início">
-        <img src="assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" />
+        <img src="/assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" />
       </a>
       <ul class="nav-links">
         <li><a href="#sobre">Evento</a></li>
@@ -37,7 +38,7 @@
         <li><a href="#expositores">Expositores</a></li>
         <li><a href="https://www.instagram.com/campoagrooficial/" class="nav-cta" target="_blank" rel="noopener">Instagram</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" type="button"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" type="button"><span></span><span></span><span></span></button>
     </nav>
 
     <main>
@@ -91,7 +92,7 @@
             </div>
           </div>
           <div class="editorial-visual reveal">
-            <img src="assets/img/banner15.png" alt="Família plantando uma muda no campo ao pôr do sol" loading="lazy" />
+            <img src="/assets/img/banner15.png" alt="Família plantando uma muda no campo ao pôr do sol" loading="lazy" />
             <div class="visual-caption"><span>Campo do Tenente</span><strong>Tradição rural com visão de futuro</strong></div>
           </div>
         </div>
@@ -116,9 +117,9 @@
             <p>Uma agenda clara para acompanhar feira, arena, experiências, Tratoraço e grandes atrações.</p>
           </div>
           <div class="prog-tabs reveal" role="tablist" aria-label="Dias da programação">
-            <button type="button" class="prog-tab active" onclick="showTab('prog-sexta', this)">Sexta · 17/07</button>
-            <button type="button" class="prog-tab" onclick="showTab('prog-sabado', this)">Sábado · 18/07</button>
-            <button type="button" class="prog-tab" onclick="showTab('prog-domingo', this)">Domingo · 19/07</button>
+            <button type="button" class="prog-tab active" data-tab="prog-sexta">Sexta · 17/07</button>
+            <button type="button" class="prog-tab" data-tab="prog-sabado">Sábado · 18/07</button>
+            <button type="button" class="prog-tab" data-tab="prog-domingo">Domingo · 19/07</button>
           </div>
           <div id="prog-sexta" class="prog-content active">
             <div class="timeline">
@@ -168,10 +169,10 @@
             <h2 class="section-title">Momentos que contam a história do <span class="highlight">CampoAgro</span></h2>
           </div>
           <div class="masonry-gallery">
-            <button class="memory-card tall reveal" type="button" data-media-type="image" data-src="assets/img/banner15.png" data-title="Semente do futuro" data-category="CAMPOAGRO 2026"><img src="assets/img/banner15.png" alt="Família plantando no campo" loading="lazy" /><span>Semente do futuro</span></button>
-            <button class="memory-card reveal" type="button" data-media-type="image" data-src="assets/img/joao-nelore-texano.jpg" data-title="João Nelore e Texano" data-category="Shows"><img src="assets/img/joao-nelore-texano.jpg" alt="João Nelore e Texano" loading="lazy" /><span>Shows nacionais</span></button>
-            <button class="memory-card reveal" type="button" data-media-type="image" data-src="assets/img/luan-pereira-tvz-2024.png" data-title="Luan Pereira" data-category="Palco CampoAgro"><img src="assets/img/luan-pereira-tvz-2024.png" alt="Luan Pereira" loading="lazy" /><span>Arena principal</span></button>
-            <button class="memory-card wide reveal" type="button" data-media-type="image" data-src="assets/img/tratoraco/tratoraco-01.png" data-title="Tratoraço" data-category="Tradição rural"><img src="assets/img/tratoraco/tratoraco-01.png" alt="Tratoraço CampoAgro" loading="lazy" /><span>Tradição em movimento</span></button>
+            <button class="memory-card tall reveal" type="button" data-media-type="image" data-src="/assets/img/banner15.png" data-title="Semente do futuro" data-category="CAMPOAGRO 2026"><img src="/assets/img/banner15.png" alt="Família plantando no campo" loading="lazy" /><span>Semente do futuro</span></button>
+            <button class="memory-card reveal" type="button" data-media-type="image" data-src="/assets/img/joao-nelore-texano.jpg" data-title="João Nelore e Texano" data-category="Shows"><img src="/assets/img/joao-nelore-texano.jpg" alt="João Nelore e Texano" loading="lazy" /><span>Shows nacionais</span></button>
+            <button class="memory-card reveal" type="button" data-media-type="image" data-src="/assets/img/luan-pereira-tvz-2024.png" data-title="Luan Pereira" data-category="Palco CampoAgro"><img src="/assets/img/luan-pereira-tvz-2024.png" alt="Luan Pereira" loading="lazy" /><span>Arena principal</span></button>
+            <button class="memory-card wide reveal" type="button" data-media-type="image" data-src="/assets/img/tratoraco/tratoraco-01.png" data-title="Tratoraço" data-category="Tradição rural"><img src="/assets/img/tratoraco/tratoraco-01.png" alt="Tratoraço CampoAgro" loading="lazy" /><span>Tradição em movimento</span></button>
           </div>
         </div>
       </section>
@@ -185,10 +186,10 @@
             <div class="tratoraco-stats"><div class="tratoraco-stat"><strong>+100</strong><span>tratores esperados</span></div><div class="tratoraco-stat"><strong>100%</strong><span>identidade rural</span></div></div>
           </div>
           <div class="tratoraco-carousel reveal" data-tratoraco-track>
-            <img src="assets/img/tratoraco/tratoraco-01.png" alt="Tratoraço 1" loading="lazy" />
-            <img src="assets/img/tratoraco/tratoraco-02.png" alt="Tratoraço 2" loading="lazy" />
-            <img src="assets/img/tratoraco/tratoraco-03.png" alt="Tratoraço 3" loading="lazy" />
-            <img src="assets/img/tratoraco/tratoraco-04.png" alt="Tratoraço 4" loading="lazy" />
+            <img src="/assets/img/tratoraco/tratoraco-01.png" alt="Tratoraço 1" loading="lazy" />
+            <img src="/assets/img/tratoraco/tratoraco-02.png" alt="Tratoraço 2" loading="lazy" />
+            <img src="/assets/img/tratoraco/tratoraco-03.png" alt="Tratoraço 3" loading="lazy" />
+            <img src="/assets/img/tratoraco/tratoraco-04.png" alt="Tratoraço 4" loading="lazy" />
           </div>
         </div>
       </section>
@@ -202,8 +203,8 @@
           <div class="sponsor-tier sponsor-tier-featured reveal">
             <div class="sponsor-track">
               <div class="sponsor-row sponsor-logo-row">
-                <div class="sponsor-logo-strip"><img src="assets/img/campoagro-patrocinadores.png" alt="Patrocinadores e apoiadores oficiais do CampoAgro" loading="lazy" /></div>
-                <div class="sponsor-logo-strip" aria-hidden="true"><img src="assets/img/campoagro-patrocinadores.png" alt="" loading="lazy" /></div>
+                <div class="sponsor-logo-strip"><img src="/assets/img/campoagro-patrocinadores.png" alt="Patrocinadores e apoiadores oficiais do CampoAgro" loading="lazy" /></div>
+                <div class="sponsor-logo-strip" aria-hidden="true"><img src="/assets/img/campoagro-patrocinadores.png" alt="" loading="lazy" /></div>
               </div>
             </div>
           </div>
@@ -264,7 +265,7 @@
     <footer>
       <div class="container footer-grid">
         <div class="footer-brand">
-          <img class="footer-logo" src="assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" loading="lazy" />
+          <img class="footer-logo" src="/assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" loading="lazy" />
           <p>Evento oficial do agro, inovação rural e entretenimento em Campo do Tenente, Paraná.</p>
         </div>
         <div><h3>Evento</h3><a href="#sobre">Sobre</a><a href="#programacao">Programação</a><a href="#areas">Áreas</a><a href="#mapa">Mapa</a></div>
@@ -282,6 +283,6 @@
       </div>
     </div>
 
-    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
   </body>
 </html>

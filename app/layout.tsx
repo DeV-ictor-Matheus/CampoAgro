@@ -1,9 +1,29 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+
+import './globals.css';
+
+export const viewport: Viewport = {
+  themeColor: '#040404',
+};
 
 export const metadata: Metadata = {
   title: 'CampoAgro 2026 | Plantando na terra a semente do futuro',
   description:
-    'CampoAgro 2026 - O maior encontro do agronegócio e agricultura familiar da região Sul. Campo do Tenente, PR.',
+    'CampoAgro 2026 - feira agropecuária, inovação rural, negócios, Tratoraço e entretenimento em Campo do Tenente, Paraná.',
+  keywords: [
+    'CampoAgro',
+    'CampoAgro 2026',
+    'agronegócio',
+    'Campo do Tenente',
+    'Paraná',
+    'feira agropecuária',
+    'agricultura familiar',
+    'Tratoraço',
+    'shows',
+  ],
+  icons: {
+    icon: '/assets/img/logo-campoagro.png',
+  },
 };
 
 export default function RootLayout({
@@ -13,6 +33,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body style={{ margin: 0 }}>{children}</body>
     </html>
   );
