@@ -1,10 +1,27 @@
 export function initNavigation() {
   const nav = document.getElementById('navbar');
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const sections = links
+    .map((link) => document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1))))
+    .filter(Boolean);
 
-  window.addEventListener('scroll', () => {
+  function updateNavState() {
     if (!nav) return;
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+    nav.classList.toggle('scrolled', window.scrollY > 24);
+
+    const active = sections
+      .slice()
+      .reverse()
+      .find((section) => section.getBoundingClientRect().top <= 140);
+
+    links.forEach((link) => {
+      const id = link.getAttribute('href')?.slice(1);
+      link.classList.toggle('active', Boolean(active && id === active.id));
+    });
+  }
+
+  updateNavState();
+  window.addEventListener('scroll', updateNavState, { passive: true });
 
   window.toggleMenu = () => {
     nav?.classList.toggle('menu-open');
@@ -16,7 +33,6 @@ export function initNavigation() {
     const href = link.getAttribute('href');
     if (!href || href === '#' || href.length < 2) return;
     const id = decodeURIComponent(href.slice(1));
-    if (!id) return;
     const target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
@@ -25,7 +41,7 @@ export function initNavigation() {
     try {
       history.replaceState(null, '', href);
     } catch {
-      /* documentos opacos (ex.: about:srcdoc) podem bloquear history */
+      // Ambientes srcdoc podem bloquear history.
     }
   });
 }

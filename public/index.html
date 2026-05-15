@@ -3,1388 +3,282 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="CampoAgro 2026 - O maior encontro do agronegócio e agricultura familiar da região Sul. Campo do Tenente, PR."
-    />
-    <meta
-      name="keywords"
-      content="CampoAgro, agronegócio, Campo do Tenente, Paraná, feira agropecuária, agricultura familiar, shows nacionais"
-    />
+    <meta name="description" content="CampoAgro 2026 - feira agropecuária, inovação rural, negócios, Tratoraço e entretenimento em Campo do Tenente, Paraná." />
+    <meta name="keywords" content="CampoAgro, CampoAgro 2026, agronegócio, Campo do Tenente, Paraná, feira agropecuária, agricultura familiar, Tratoraço, shows" />
+    <meta name="theme-color" content="#040404" />
     <title>CampoAgro 2026 | Plantando na terra a semente do futuro</title>
     <link rel="icon" href="assets/img/logo-campoagro.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/premium.css" />
   </head>
   <body>
-    <!-- LOADING -->
-    <div id="loading">
-      <img
-        class="loading-logo"
-        src="assets/img/logo-campoagro.png"
-        alt="CampoAgro Campo do Tenente"
-      />
+    <div id="loading" aria-label="Carregando CampoAgro">
+      <img class="loading-logo" src="assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" />
       <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
-      <p
-        style="
-          font-size: 0.7rem;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.3);
-        "
-      >
-        Campo do Tenente · PR · 2026
-      </p>
+      <p>Campo do Tenente · PR · 2026</p>
     </div>
 
-    <!-- WHATSAPP -->
-    <a
-      href="https://wa.me/5541999999999"
-      class="whatsapp-float"
-      target="_blank"
-      title="WhatsApp"
-      aria-label="WhatsApp"
-      >WA</a
-    >
+    <a href="https://wa.me/5541999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">WA</a>
 
-    <!-- NAV -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Navegação principal">
       <a href="#home" class="nav-brand" aria-label="CampoAgro 2026 - início">
-        <img
-          src="assets/img/logo-campoagro.png"
-          alt="CampoAgro Campo do Tenente"
-        />
+        <img src="assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" />
       </a>
       <ul class="nav-links">
         <li><a href="#sobre">Evento</a></li>
-        <li><a href="#shows">Shows</a></li>
         <li><a href="#programacao">Programação</a></li>
         <li><a href="#areas">Áreas</a></li>
+        <li><a href="#memorias">Galeria</a></li>
+        <li><a href="#tratoraco">Tratoraço</a></li>
         <li><a href="#patrocinadores">Parceiros</a></li>
         <li><a href="#expositores">Expositores</a></li>
-        <li>
-          <a
-            href="https://www.instagram.com/campoagrooficial/"
-            class="nav-cta"
-            target="_blank"
-            rel="noopener"
-            >Instagram</a
-          >
-        </li>
+        <li><a href="https://www.instagram.com/campoagrooficial/" class="nav-cta" target="_blank" rel="noopener">Instagram</a></li>
       </ul>
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" type="button"><span></span><span></span><span></span></button>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="hero-bg"></div>
-      <div class="hero-grid"></div>
-      <div class="hero-particles" id="particles"></div>
-      <div class="hero-content-backdrop" aria-hidden="true"></div>
-      <div class="hero-content">
-        <div class="hero-badge">3ª edição · Campo do Tenente · Paraná</div>
-        <h1 class="hero-title">
-          <span class="year">CampoAgro 2026</span>
-          Campo<span class="gold">Agro</span>
-        </h1>
-        <p class="hero-tagline">Plantando na terra, a semente do futuro</p>
-        <p class="hero-sub">
-          Feira agropecuária, máquinas, tecnologia, Tratoraço, agricultura
-          familiar, expositores e grandes shows em um evento feito para Campo
-          do Tenente e toda a região.
-        </p>
-        <div class="hero-buttons">
-          <a href="#shows" class="btn-primary">Shows 2026</a>
-          <a href="#programacao" class="btn-outline">Programação</a>
-          <a href="#expositores" class="btn-outline">Seja Expositor</a>
+    <main>
+      <section class="hero hero-v5" id="home" aria-label="CampoAgro 2026">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-light hero-light-one"></div>
+        <div class="hero-light hero-light-two"></div>
+        <div class="hero-content reveal">
+          <div class="hero-badge">17 a 19 de julho de 2026 · Campo do Tenente · PR</div>
+          <h1 class="hero-title"><span class="year">3ª edição</span>CAMPO<span class="gold">AGRO</span> 2026</h1>
+          <p class="hero-tagline">Plantando na terra, a semente do futuro.</p>
+          <p class="hero-sub">O maior encontro do agronegócio, inovação rural e entretenimento do sul do Paraná.</p>
+          <div class="hero-buttons">
+            <a href="#programacao" class="btn-primary">Ver Programação</a>
+            <a href="https://www.instagram.com/campoagrooficial/" class="btn-outline" target="_blank" rel="noopener">Comprar Ingresso</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-scroll">
-        <span class="scroll-text">Role para baixo</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
+        <div class="hero-proof reveal" aria-label="Resumo do evento">
+          <span>Feira agro</span>
+          <strong>Negócios · Tecnologia · Shows · Tratoraço</strong>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><span class="scroll-text">Role para baixo</span><div class="scroll-line"></div></div>
+      </section>
 
-    <!-- COUNTDOWN -->
-    <div class="countdown-section">
-      <p class="countdown-label-top">Contagem regressiva para o evento</p>
-      <div class="countdown-grid">
-        <div class="count-item">
-          <div class="count-num" id="cd-days">0</div>
-          <span class="count-label">Dias</span>
-        </div>
-        <div class="count-sep">:</div>
-        <div class="count-item">
-          <div class="count-num" id="cd-hours">00</div>
-          <span class="count-label">Horas</span>
-        </div>
-        <div class="count-sep">:</div>
-        <div class="count-item">
-          <div class="count-num" id="cd-mins">00</div>
-          <span class="count-label">Minutos</span>
-        </div>
-        <div class="count-sep">:</div>
-        <div class="count-item">
-          <div class="count-num" id="cd-secs">00</div>
-          <span class="count-label">Segundos</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- RESUMO ESTILO EXPO -->
-    <section class="expo-highlights" aria-label="Principais informações do CampoAgro">
-      <div class="container">
-        <div class="expo-highlights-grid">
-          <a class="expo-card reveal" href="#shows"><span>Palco principal</span><strong>Shows nacionais</strong><small>João Nelore e Texano, Luan Pereira e novas atrações.</small></a>
-          <a class="expo-card reveal" href="#areas"><span>Feira agro</span><strong>Exposição e tecnologia</strong><small>Máquinas, equipamentos, animais, negócios e inovação.</small></a>
-          <a class="expo-card reveal" href="#tratoraco"><span>Tradição rural</span><strong>Tratoraço</strong><small>Desfile com produtores, tratores e famílias do campo.</small></a>
-          <a class="expo-card reveal" href="#expositores"><span>Marcas e empresas</span><strong>Seja expositor</strong><small>Espaços comerciais para vender, ativar marca e gerar negócios.</small></a>
-        </div>
-      </div>
-    </section>
-    <!-- SOBRE -->
-    <section class="sobre" id="sobre">
-      <div class="container">
-        <div class="sobre-grid">
-          <div class="sobre-text reveal">
-            <div class="section-badge">Sobre o Evento</div>
-            <h2 class="section-title">
-              O Agro <span class="highlight">Pulsa Aqui</span>
-            </h2>
-            <p>
-              O CampoAgro 2026 é o grande encontro do agronegócio paranaense,
-              celebrando a força, tradição e inovação do produtor rural de Campo
-              do Tenente e região. Um evento que une negócios, tecnologia e
-              cultura em um só lugar.
-            </p>
-            <p>
-              Da exposição agropecuária às grandes máquinas do campo, dos
-              workshops técnicos aos shows nacionais que lotam a arena — o
-              CampoAgro é onde o interior do Paraná mostra ao Brasil do que é
-              capaz.
-            </p>
-            <p>
-              Feira de negócios, praça gastronômica, espaço para agricultura
-              familiar, sustentabilidade e muito networking. Uma plataforma
-              completa que valoriza o produtor rural e movimenta a economia
-              regional.
-            </p>
-            <div class="pilares">
-              <div class="pilar">Exposição Agropecuária</div>
-              <div class="pilar">Máquinas Agrícolas</div>
-              <div class="pilar">Agricultura Familiar</div>
-              <div class="pilar">Sustentabilidade</div>
-              <div class="pilar">Feira de Negócios</div>
-              <div class="pilar">Gastronomia</div>
-              <div class="pilar">Shows Nacionais</div>
-              <div class="pilar">Workshops Técnicos</div>
-              <div class="pilar">Networking</div>
-              <div class="pilar">Inovação</div>
-            </div>
-            <div class="sobre-stats">
-              <div class="stat-card">
-                <div class="stat-num">+50.000</div>
-                <div class="stat-desc">Visitantes esperados</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-num">+200</div>
-                <div class="stat-desc">Empresas expositoras</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-num">5 dias</div>
-                <div class="stat-desc">De grande evento</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-num">+30</div>
-                <div class="stat-desc">Atrações e shows</div>
-              </div>
-            </div>
-          </div>
-          <div class="sobre-visual reveal">
-            <div class="sobre-image-main">
-              <span class="visual-word">AGRO</span>
-            </div>
-            <div class="sobre-image-float">
-              <span class="visual-word small">2026</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROGRAMAÇÃO -->
-    <section class="programacao" id="programacao">
-      <div class="container">
-        <div class="reveal" style="margin-bottom: 3rem">
-          <div class="section-badge">Agenda Oficial</div>
-          <h2 class="section-title">
-            Programação <span class="highlight">2026</span>
-          </h2>
-        </div>
-        <div class="prog-tabs">
-          <button
-            type="button"
-            class="prog-tab active"
-            onclick="showTab('prog-sexta', this)"
-          >
-            Sexta · 17/06
-          </button>
-          <button
-            type="button"
-            class="prog-tab"
-            onclick="showTab('prog-sabado', this)"
-          >
-            Sábado · 18/06
-          </button>
-          <button
-            type="button"
-            class="prog-tab"
-            onclick="showTab('prog-domingo', this)"
-          >
-            Domingo · 19/06
-          </button>
-        </div>
-        <div
-          id="prog-sexta"
-          class="prog-content prog-content--bg prog-content--bg-sexta active"
-        >
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="tl-time">17/06</div>
-              <div class="tl-title">Palco principal — atração a confirmar</div>
-              <div class="tl-desc">
-                A programação do show desta noite será divulgada em breve.
-              </div>
-              <span class="tl-badge">Sexta-feira</span>
-            </div>
-          </div>
-        </div>
-        <div
-          id="prog-sabado"
-          class="prog-content prog-content--bg prog-content--bg-sabado"
-        >
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="tl-time">18/06</div>
-              <div class="tl-title">João Nelore e Texano</div>
-              <div class="tl-desc">
-                Dupla sertaneja em ascensão no agronejo, conhecida por hits como
-                <em>Cowboy 2.0</em> e <em>Tipo Nelore</em>. Show no palco
-                principal.
-              </div>
-              <span class="tl-badge">Show confirmado</span>
-            </div>
-          </div>
-        </div>
-        <div
-          id="prog-domingo"
-          class="prog-content prog-content--bg prog-content--bg-domingo"
-        >
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="tl-time">19/06</div>
-              <div class="tl-title">Luan Pereira</div>
-              <div class="tl-desc">
-                Cantor e compositor, referência no agronejo e no streaming no
-                Brasil. Show de encerramento no palco principal.
-              </div>
-              <span class="tl-badge">Show confirmado</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ÁREAS -->
-    <section class="areas" id="areas">
-      <div class="container">
-        <div style="text-align: center; margin-bottom: 3rem" class="reveal">
-          <div class="section-badge">Estrutura do Evento</div>
-          <h2 class="section-title">
-            Áreas do <span class="highlight">CampoAgro</span>
-          </h2>
-          <p
-            style="
-              color: rgba(255, 255, 255, 0.5);
-              max-width: 600px;
-              margin: 0 auto;
-              line-height: 1.8;
-            "
-          >
-            Uma estrutura completa pensada para atender todos os perfis de
-            visitantes — do produtor ao empresário, da família ao especialista
-            técnico.
-          </p>
-        </div>
-        <div class="areas-grid">
-          <div class="area-card reveal">
-            <div class="area-title">Exposição Agropecuária</div>
-            <p class="area-desc">
-              Raças bovinas, suínos, aves, ovinos e caprinos de alto padrão
-              genético. Concursos e julgamentos oficiais.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Máquinas Agrícolas</div>
-            <p class="area-desc">
-              As últimas novidades em tratores, colheitadeiras, implementos e
-              tecnologia de precisão para o campo.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Agricultura Familiar</div>
-            <p class="area-desc">
-              Espaço dedicado ao pequeno produtor, cooperativas e associações
-              rurais da região.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Feira de Negócios</div>
-            <p class="area-desc">
-              Rodadas de negócios, matchmaking empresarial e ambiente propício
-              para fechar contratos.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Praça Gastronômica</div>
-            <p class="area-desc">
-              Sabores da culinária típica paranaense, gastronomia premium e
-              experiências food & wine.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Arena de Shows</div>
-            <p class="area-desc">
-              Grande palco com artistas nacionais do sertanejo, country e música
-              regional.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Workshops e Palestras</div>
-            <p class="area-desc">
-              Conteúdo técnico e estratégico sobre inovação, sustentabilidade e
-              mercado agro.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Espaço Empresarial</div>
-            <p class="area-desc">
-              Stands corporativos, lançamento de produtos e exposição de
-              tecnologias para o agronegócio.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Espaço Kids</div>
-            <p class="area-desc">
-              Área especial para crianças com atividades educativas, contato com
-              animais e diversão garantida.
-            </p>
-          </div>
-          <div class="area-card reveal">
-            <div class="area-title">Área VIP</div>
-            <p class="area-desc">
-              Experiência exclusiva com open bar, lounge privativo, atendimento
-              personalizado e vista privilegiada.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SHOWS -->
-    <section class="shows-section" id="shows">
-      <div class="container">
-        <div class="shows-header reveal">
+      <section class="countdown-section premium-band" aria-label="Contagem regressiva">
+        <div class="container countdown-shell reveal">
           <div>
-            <div class="section-badge">Palco CampoAgro</div>
-            <h2 class="section-title">Shows <span class="highlight">confirmados</span></h2>
+            <p class="eyebrow">Contagem regressiva</p>
+            <h2>O agro se encontra em Campo do Tenente</h2>
           </div>
-          <p>Uma área inspirada em grandes exposições: destaque rápido para atrações, datas e chamada para acompanhar o Instagram oficial.</p>
+          <div class="countdown-grid">
+            <div class="count-item"><div class="count-num" id="cd-days">0</div><span class="count-label">Dias</span></div>
+            <div class="count-item"><div class="count-num" id="cd-hours">00</div><span class="count-label">Horas</span></div>
+            <div class="count-item"><div class="count-num" id="cd-mins">00</div><span class="count-label">Minutos</span></div>
+            <div class="count-item"><div class="count-num" id="cd-secs">00</div><span class="count-label">Segundos</span></div>
+          </div>
         </div>
-        <div class="shows-grid">
-          <article class="show-card reveal show-card-featured">
-            <img src="assets/img/joao-nelore-texano.jpg" alt="João Nelore e Texano">
-            <div><span>18/06 · Sábado</span><h3>João Nelore e Texano</h3><p>Embaixadores do evento e atração do palco principal.</p></div>
-          </article>
-          <article class="show-card reveal">
-            <img src="assets/img/luan-pereira-tvz-2024.png" alt="Luan Pereira">
-            <div><span>19/06 · Domingo</span><h3>Luan Pereira</h3><p>Show de encerramento com um dos nomes fortes do agronejo.</p></div>
-          </article>
-          <article class="show-card reveal show-card-soon">
-            <div><span>17/06 · Sexta</span><h3>Atração a confirmar</h3><p>Novidades serão divulgadas no Instagram oficial do CampoAgro.</p><a href="https://www.instagram.com/campoagrooficial/" target="_blank" rel="noopener">Acompanhar Instagram</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <!-- EXPOSITORES -->
-    <section class="expositor-section" id="expositores">
-      <div class="container">
-        <div class="expositor-grid">
-          <div class="reveal">
-            <div class="section-badge">Participe</div>
-            <h2 class="section-title">
-              Seja um <span class="highlight">Expositor</span>
-            </h2>
-            <p
-              style="
-                color: rgba(255, 255, 255, 0.65);
-                line-height: 1.9;
-                margin-bottom: 2rem;
-              "
-            >
-              O CampoAgro 2026 é a maior vitrine do agronegócio regional.
-              Exponha sua marca, seus produtos e seus serviços para mais de
-              50.000 visitantes qualificados.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 1rem">
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  padding: 1rem;
-                  border: 1px solid rgba(201, 162, 39, 0.15);
-                "
-              >
-                <div>
-                  <div style="font-weight: 700; font-size: 0.9rem">
-                    Máquinas e Implementos
-                  </div>
-                  <div
-                    style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.4)"
-                  >
-                    Tratores, colheitadeiras, implementos
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  padding: 1rem;
-                  border: 1px solid rgba(201, 162, 39, 0.15);
-                "
-              >
-                <div>
-                  <div style="font-weight: 700; font-size: 0.9rem">
-                    Insumos e Tecnologia
-                  </div>
-                  <div
-                    style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.4)"
-                  >
-                    Sementes, defensivos, fertilizantes
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  padding: 1rem;
-                  border: 1px solid rgba(201, 162, 39, 0.15);
-                "
-              >
-                <div>
-                  <div style="font-weight: 700; font-size: 0.9rem">
-                    Cooperativas e Associações
-                  </div>
-                  <div
-                    style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.4)"
-                  >
-                    Cooperativas rurais e entidades
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  padding: 1rem;
-                  border: 1px solid rgba(201, 162, 39, 0.15);
-                "
-              >
-                <div>
-                  <div style="font-weight: 700; font-size: 0.9rem">
-                    Tecnologia Agrícola
-                  </div>
-                  <div
-                    style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.4)"
-                  >
-                    Drones, sensores, sistemas de gestão
-                  </div>
-                </div>
-              </div>
+      </section>
+
+      <section class="sobre editorial-section" id="sobre">
+        <div class="container editorial-grid">
+          <div class="editorial-copy reveal">
+            <div class="section-badge">Sobre o evento</div>
+            <h2 class="section-title">Uma vitrine premium para a força do <span class="highlight">agro brasileiro</span></h2>
+            <p>O CampoAgro 2026 conecta produtores, empresas, famílias, tecnologia, cultura rural e entretenimento em uma experiência de alto impacto para Campo do Tenente e toda a região.</p>
+            <p>A proposta é unir feira de negócios, exposição agropecuária, máquinas, agricultura familiar, gastronomia, conteúdo técnico e shows em um fluxo organizado, elegante e fácil de navegar.</p>
+            <div class="editorial-tags" aria-label="Pilares do evento">
+              <span>Negócios</span><span>Tecnologia</span><span>Agricultura familiar</span><span>Máquinas</span><span>Shows</span><span>Gastronomia</span>
             </div>
           </div>
-          <div class="reveal">
-            <div
-              style="
-                background: rgba(0, 0, 0, 0.3);
-                border: 1px solid rgba(201, 162, 39, 0.2);
-                padding: 2.5rem;
-              "
-            >
-              <h3
-                style="
-                  font-family: &quot;Barlow Condensed&quot;, sans-serif;
-                  font-size: 1.5rem;
-                  font-weight: 800;
-                  text-transform: uppercase;
-                  margin-bottom: 1.5rem;
-                  color: var(--dourado);
-                "
-              >
-                Formulário do Expositor
-              </h3>
-              <div class="form-group">
-                <label>Nome da Empresa</label>
-                <input
-                  type="text"
-                  placeholder="Razão social ou nome fantasia"
-                />
-              </div>
-              <div class="form-group">
-                <label>CNPJ</label>
-                <input type="text" placeholder="00.000.000/0000-00" />
-              </div>
-              <div class="form-group">
-                <label>Responsável</label>
-                <input type="text" placeholder="Nome do responsável" />
-              </div>
-              <div class="form-group">
-                <label>E-mail</label>
-                <input type="email" placeholder="contato@empresa.com.br" />
-              </div>
-              <div class="form-group">
-                <label>WhatsApp</label>
-                <input type="tel" placeholder="(41) 99999-9999" />
-              </div>
-              <div class="form-group">
-                <label>Segmento</label>
-                <select>
-                  <option value="">Selecione o segmento</option>
-                  <option>Máquinas Agrícolas</option>
-                  <option>Implementos</option>
-                  <option>Insumos Agrícolas</option>
-                  <option>Tecnologia Agro</option>
-                  <option>Cooperativa</option>
-                  <option>Veículos Utilitários</option>
-                  <option>Gastronomia</option>
-                  <option>Outro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Área desejada (m²)</label>
-                <input type="text" placeholder="Ex: 50m²" />
-              </div>
-              <div class="form-group">
-                <label>Mensagem</label>
-                <textarea
-                  placeholder="Descreva brevemente o que pretende expor..."
-                  rows="3"
-                ></textarea>
-              </div>
-              <button
-                class="btn-primary"
-                style="width: 100%"
-                onclick="
-                  alert(
-                    'Solicitação enviada! Em breve nossa equipe entrará em contato.',
-                  )
-                "
-              >
-                Enviar Solicitação
-              </button>
-            </div>
+          <div class="editorial-visual reveal">
+            <img src="assets/img/banner15.png" alt="Família plantando uma muda no campo ao pôr do sol" loading="lazy" />
+            <div class="visual-caption"><span>Campo do Tenente</span><strong>Tradição rural com visão de futuro</strong></div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- MEMÓRIAS DO CAMPOAGRO -->
-    <section class="memorias" id="memorias">
-      <div class="container">
-        <div class="memorias-header reveal">
-          <div>
-            <div class="section-badge">Memórias</div>
-            <h2 class="section-title">
-              CampoAgro <span class="highlight">2025</span> &amp; Tratoraço
-            </h2>
-          </div>
-          <p>
-            Momentos do CampoAgro 2025 e do Tratoraço 2025 — público, arena,
-            passeata de tratores e o clima do agro em Campo do Tenente. Confira
-            também momentos do
-            <a href="#tratoraco">Tratoraço 2025</a>.
-          </p>
-        </div>
-
-        <div class="memorias-stats reveal">
-          <div class="memoria-stat">
-            <strong>25 mil</strong><span>visitantes</span>
-          </div>
-          <div class="memoria-stat">
-            <strong>200+</strong><span>expositores</span>
-          </div>
-          <div class="memoria-stat">
-            <strong>80+</strong><span>máquinas expostas</span>
-          </div>
-          <div class="memoria-stat">
-            <strong>30+</strong><span>shows e atrações</span>
-          </div>
-          <div class="memoria-stat">
-            <strong>500+</strong><span>produtores participantes</span>
-          </div>
-        </div>
-
-        <div
-          class="memorias-carousel reveal"
-          aria-label="Carrossel de memórias do CampoAgro"
-        >
-          <button
-            class="memoria-arrow memoria-prev"
-            type="button"
-            aria-label="Ver mídia anterior"
-          >
-            Anterior
-          </button>
-          <div class="memorias-track" data-memoria-track>
-            <button
-              class="memoria-card"
-              type="button"
-              data-media-type="image"
-              data-src="assets/img/hero-familia-agro.png"
-              data-title="Família no agro"
-              data-category="CampoAgro"
-            >
-              <img
-                src="assets/img/hero-familia-agro.png"
-                alt="Público e família no CampoAgro"
-              />
-              <span class="media-category">CampoAgro</span>
-              <span class="media-title">Família no agro</span>
-            </button>
-            <button
-              class="memoria-card tall"
-              type="button"
-              data-media-type="image"
-              data-src="assets/img/joao-nelore-texano.jpg"
-              data-title="Arena e palco"
-              data-category="Shows"
-            >
-              <img
-                src="assets/img/joao-nelore-texano.jpg"
-                alt="Show na arena do CampoAgro"
-              />
-              <span class="media-category">Shows</span>
-              <span class="media-title">Noite no palco principal</span>
-            </button>
-            <button
-              class="memoria-card"
-              type="button"
-              data-media-type="image"
-              data-src="assets/img/luan-pereira-tvz-2024.png"
-              data-title="Atração nacional"
-              data-category="Arena"
-            >
-              <img
-                src="assets/img/luan-pereira-tvz-2024.png"
-                alt="Show nacional na arena CampoAgro"
-              />
-              <span class="media-category">Arena</span>
-              <span class="media-title">Música e energia</span>
-            </button>
-            <button
-              class="memoria-card wide"
-              type="button"
-              data-media-type="image"
-              data-src="assets/img/hero-familia-agro.png"
-              data-title="Clima do evento"
-              data-category="Público"
-            >
-              <img
-                src="assets/img/hero-familia-agro.png"
-                alt="Clima e público no CampoAgro"
-              />
-              <span class="media-category">Público</span>
-              <span class="media-title">Tradição e festa</span>
-            </button>
-            <button
-              class="memoria-card"
-              type="button"
-              data-media-type="image"
-              data-src="assets/img/joao-nelore-texano.jpg"
-              data-title="Som ao vivo"
-              data-category="Shows"
-            >
-              <img
-                src="assets/img/joao-nelore-texano.jpg"
-                alt="Apresentação ao vivo no CampoAgro"
-              />
-              <span class="media-category">Shows</span>
-              <span class="media-title">Emoção na arena</span>
-            </button>
-            <button
-              class="memoria-card"
-              type="button"
-              data-media-type="image"
-              data-src="assets/img/luan-pereira-tvz-2024.png"
-              data-title="Grande encontro"
-              data-category="Cultura"
-            >
-              <img
-                src="assets/img/luan-pereira-tvz-2024.png"
-                alt="Momento cultural no CampoAgro"
-              />
-              <span class="media-category">Cultura</span>
-              <span class="media-title">Noite especial</span>
-            </button>
-          </div>
-          <button
-            class="memoria-arrow memoria-next"
-            type="button"
-            aria-label="Ver próxima mídia"
-          >
-            Próxima
-          </button>
-        </div>
-      </div>
-      <!-- TRATORAÇO 2025 -->
-      <div class="tratoraco memorias-tratoraco" id="tratoraco">
+      <section class="numbers-section" id="numeros" aria-label="Números do evento">
         <div class="container">
-          <div class="tratoraco-grid">
-            <div class="tratoraco-copy">
-              <div class="section-badge">Demonstração Especial</div>
-              <h2 class="section-title">
-                Tratoraço <span class="highlight">2025</span>
-              </h2>
-              <p>
-                Um dos momentos mais tradicionais de Campo do Tenente:
-                agricultores da região se reúnem com seus tratores e tomam as
-                ruas em uma grande passeata, celebrando o trabalho no campo, a
-                força das famílias rurais e o orgulho da cidade.
-              </p>
-              <p>
-                Registros da passeata e da festa do campo que marca Campo do
-                Tenente — tradição, famílias produtoras e orgulho rural.
-              </p>
-              <div class="tratoraco-stats">
-                <div class="tratoraco-stat">
-                  <span>2025</span>
-                  <small>Edição registrada</small>
-                </div>
-                <div class="tratoraco-stat">
-                  <span>27 jul.</span>
-                  <small>Acervo oficial</small>
-                </div>
-                <div class="tratoraco-stat">
-                  <span>Rural</span>
-                  <small>Famílias e produtores</small>
-                </div>
-              </div>
-              <div class="tratoraco-actions">
-                <a
-                  class="btn-primary"
-                  href="https://drive.google.com/drive/folders/1-EN_GlhsmYYx3dNEJZQ0U_fyQxLglrPw"
-                  target="_blank"
-                  rel="noopener"
-                  >Ver galeria completa</a
-                >
-                <a
-                  class="btn-outline"
-                  href="https://www.instagram.com/campoagrooficial/"
-                  target="_blank"
-                  rel="noopener"
-                  >Instagram oficial</a
-                >
-              </div>
-            </div>
-            <div class="tratoraco-media">
-              <div
-                class="tratoraco-carousel reveal"
-                aria-label="Fotos do Tratoraço 2025"
-              >
-                <button
-                  type="button"
-                  class="tratoraco-arrow tratoraco-prev"
-                  aria-label="Foto anterior"
-                >
-                  Anterior
-                </button>
-                <div class="tratoraco-track" data-tratoraco-track>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-01.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Comunidade"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-01.png"
-                      alt="Tratoraço 2025 — criança no trator de brinquedo com passeata ao fundo"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-02.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Passeata"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-02.png"
-                      alt="Tratoraço 2025 — filas de tratores nas duas margens da estrada"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-03.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Máquinas"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-03.png"
-                      alt="Tratoraço 2025 — casal no trator New Holland TL75E"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-04.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Comunidade"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-04.png"
-                      alt="Tratoraço 2025 — família no John Deere 5303"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-05.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Comunidade"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-05.png"
-                      alt="Tratoraço 2025 — família na cabine de trator amarelo"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-06.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Máquinas"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-06.png"
-                      alt="Tratoraço 2025 — participante no Case IH Farmall 80"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-07.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Comunidade"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-07.png"
-                      alt="Tratoraço 2025 — família no New Holland TL75E"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-08.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Máquinas"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-08.png"
-                      alt="Tratoraço 2025 — John Deere 5060E com participantes"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-09.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Passeata"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-09.png"
-                      alt="Tratoraço 2025 — jovens no trator Valtra"
-                      loading="lazy"
-                    />
-                  </button>
-                  <button
-                    class="tratoraco-slide"
-                    type="button"
-                    data-media-type="image"
-                    data-src="assets/img/tratoraco/tratoraco-10.png"
-                    data-title="Tratoraço 2025"
-                    data-category="Passeata"
-                  >
-                    <img
-                      src="assets/img/tratoraco/tratoraco-10.png"
-                      alt="Tratoraço 2025 — participante entre tratores Valtra"
-                      loading="lazy"
-                    />
-                  </button>
-                </div>
-                <button
-                  type="button"
-                  class="tratoraco-arrow tratoraco-next"
-                  aria-label="Próxima foto"
-                >
-                  Próxima
-                </button>
-              </div>
-            </div>
+          <div class="numbers-grid reveal">
+            <article class="stat-card"><div class="stat-num">+50 mil</div><div class="stat-desc">visitantes esperados</div></article>
+            <article class="stat-card"><div class="stat-num">+200</div><div class="stat-desc">marcas e expositores</div></article>
+            <article class="stat-card"><div class="stat-num">3 dias</div><div class="stat-desc">de programação oficial</div></article>
+            <article class="stat-card"><div class="stat-num">+30</div><div class="stat-desc">atrações, ativações e experiências</div></article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PATROCINADORES -->
-    <section class="patrocinadores" id="patrocinadores">
-      <div class="container">
-        <div class="reveal" style="text-align: center; margin-bottom: 3rem">
-          <div class="section-badge">Apoio oficial</div>
-          <h2 class="section-title">Patrocinadores <span class="highlight">&amp; parceiros</span></h2>
-        </div>
-        <div class="sponsor-tier sponsor-tier-featured reveal">
-          <div class="sponsor-tier-label"><div class="tier-dot ouro"></div><span class="tier-name">Patrocinadores e apoiadores oficiais</span></div>
-          <div class="sponsor-track">
-            <div class="sponsor-row sponsor-logo-row" style="animation-duration: 26s">
-              <div class="sponsor-logo-strip"><img src="assets/img/campoagro-patrocinadores.png" alt="Prefeitura de Campo do Tenente, Sanepar, Detran PR, Governo do Estado do Paraná, Fomento Paraná, Itaipu Binacional, Mais que Energia e BRDE"></div>
-              <div class="sponsor-logo-strip" aria-hidden="true"><img src="assets/img/campoagro-patrocinadores.png" alt=""></div>
+      <section class="programacao" id="programacao">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="section-badge">Agenda oficial</div>
+            <h2 class="section-title">Programação <span class="highlight">2026</span></h2>
+            <p>Uma agenda clara para acompanhar feira, arena, experiências, Tratoraço e grandes atrações.</p>
+          </div>
+          <div class="prog-tabs reveal" role="tablist" aria-label="Dias da programação">
+            <button type="button" class="prog-tab active" onclick="showTab('prog-sexta', this)">Sexta · 17/07</button>
+            <button type="button" class="prog-tab" onclick="showTab('prog-sabado', this)">Sábado · 18/07</button>
+            <button type="button" class="prog-tab" onclick="showTab('prog-domingo', this)">Domingo · 19/07</button>
+          </div>
+          <div id="prog-sexta" class="prog-content active">
+            <div class="timeline">
+              <article class="tl-item reveal"><div class="tl-time">14h</div><div><h3 class="tl-title">Abertura da feira e visitação aos estandes</h3><p class="tl-desc">Expositores, máquinas, agricultura familiar, gastronomia e ativações de parceiros.</p></div><span class="tl-badge">Feira</span></article>
+              <article class="tl-item reveal"><div class="tl-time">19h</div><div><h3 class="tl-title">Cerimônia oficial CAMPOAGRO 2026</h3><p class="tl-desc">Abertura institucional com autoridades, patrocinadores e lideranças do agro regional.</p></div><span class="tl-badge">Oficial</span></article>
+              <article class="tl-item reveal"><div class="tl-time">22h</div><div><h3 class="tl-title">Palco principal · atração a confirmar</h3><p class="tl-desc">Novidades serão publicadas nos canais oficiais do evento.</p></div><span class="tl-badge">Show</span></article>
+            </div>
+          </div>
+          <div id="prog-sabado" class="prog-content">
+            <div class="timeline">
+              <article class="tl-item reveal"><div class="tl-time">10h</div><div><h3 class="tl-title">Exposição agropecuária e feira de negócios</h3><p class="tl-desc">Demonstrações, networking, estandes comerciais e experiências para toda a família.</p></div><span class="tl-badge">Negócios</span></article>
+              <article class="tl-item reveal"><div class="tl-time">16h</div><div><h3 class="tl-title">Tratoraço CampoAgro</h3><p class="tl-desc">Desfile de tratores, produtores e famílias celebrando a identidade rural da região.</p></div><span class="tl-badge">Tradição</span></article>
+              <article class="tl-item reveal"><div class="tl-time">22h</div><div><h3 class="tl-title">João Nelore e Texano</h3><p class="tl-desc">Embaixadores do evento no palco principal.</p></div><span class="tl-badge">Show confirmado</span></article>
+            </div>
+          </div>
+          <div id="prog-domingo" class="prog-content">
+            <div class="timeline">
+              <article class="tl-item reveal"><div class="tl-time">09h</div><div><h3 class="tl-title">Programação familiar e experiências do campo</h3><p class="tl-desc">Conteúdos, praça gastronômica, áreas temáticas e visitação aos expositores.</p></div><span class="tl-badge">Família</span></article>
+              <article class="tl-item reveal"><div class="tl-time">18h</div><div><h3 class="tl-title">Encerramento institucional</h3><p class="tl-desc">Celebração dos parceiros, expositores e produtores que fazem o CampoAgro acontecer.</p></div><span class="tl-badge">Oficial</span></article>
+              <article class="tl-item reveal"><div class="tl-time">21h</div><div><h3 class="tl-title">Luan Pereira</h3><p class="tl-desc">Show de encerramento com um dos grandes nomes do agronejo nacional.</p></div><span class="tl-badge">Show confirmado</span></article>
             </div>
           </div>
         </div>
-        <div style="margin-top: 3rem; text-align: center" class="reveal">
-          <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.95rem; margin-bottom: 1.5rem">Quer associar sua marca ao evento?</p>
-          <a href="#expositores" class="btn-primary">Ver cotas de patrocínio</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- MAPA -->
-    <section class="mapa-section" id="mapa">
-      <div class="container">
-        <div class="reveal" style="text-align: center; margin-bottom: 3rem">
-          <div class="section-badge">Localização</div>
-          <h2 class="section-title">
-            Mapa do <span class="highlight">Evento</span>
-          </h2>
-        </div>
-        <div class="mapa-container reveal">
-          <div class="mapa-grid">
-            <div class="mapa-zone entrada">
-              <span class="zone-name"
-                >ENTRADA PRINCIPAL · PORTÃO PRINCIPAL</span
-              >
-            </div>
-            <div class="mapa-zone main-arena">
-              <span class="zone-name">ARENA DE SHOWS</span>
-            </div>
-            <div class="mapa-zone">
-              <span class="zone-name">EXPOSIÇÃO ANIMAL</span>
-            </div>
-            <div class="mapa-zone">
-              <span class="zone-name">PRAÇA GASTRONÔMICA</span>
-            </div>
-            <div class="mapa-zone vip">
-              <span class="zone-name">ÁREA VIP</span>
-            </div>
-            <div class="mapa-zone">
-              <span class="zone-name">MÁQUINAS AGRÍCOLAS</span>
-            </div>
-            <div class="mapa-zone">
-              <span class="zone-name">ESPAÇO KIDS</span>
-            </div>
-            <div class="mapa-zone">
-              <span class="zone-name">ESPAÇO EMPRESARIAL</span>
-            </div>
-            <div class="mapa-zone">
-              <span class="zone-name">ESTACIONAMENTO</span>
-            </div>
-            <div class="mapa-zone">
-              <span class="zone-name">AGRIC. FAMILIAR</span>
-            </div>
+      <section class="areas" id="areas">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="section-badge">Áreas do evento</div>
+            <h2 class="section-title">Estrutura completa para viver o <span class="highlight">CampoAgro</span></h2>
           </div>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 3rem;
-              flex-wrap: wrap;
-              padding-top: 1.5rem;
-              border-top: 1px solid rgba(255, 255, 255, 0.06);
-            "
-          >
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                font-size: 0.8rem;
-                color: rgba(255, 255, 255, 0.4);
-              "
-            >
-              <div
-                style="
-                  width: 12px;
-                  height: 12px;
-                  background: rgba(13, 61, 31, 0.6);
-                  border: 1px solid rgba(13, 61, 31, 0.8);
-                "
-              ></div>
-              Acesso Principal
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                font-size: 0.8rem;
-                color: rgba(255, 255, 255, 0.4);
-              "
-            >
-              <div
-                style="
-                  width: 12px;
-                  height: 12px;
-                  background: rgba(201, 162, 39, 0.1);
-                  border: 1px solid rgba(201, 162, 39, 0.3);
-                "
-              ></div>
-              Área VIP
-            </div>
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                font-size: 0.8rem;
-                color: rgba(255, 255, 255, 0.4);
-              "
-            >
-              <div
-                style="
-                  width: 12px;
-                  height: 12px;
-                  background: rgba(255, 255, 255, 0.03);
-                  border: 1px solid rgba(255, 255, 255, 0.06);
-                "
-              ></div>
-              Área Geral
-            </div>
+          <div class="areas-grid">
+            <article class="area-card reveal"><span class="area-icon">01</span><h3 class="area-title">Exposição agropecuária</h3><p class="area-desc">Animais, genética, produtores e experiências ligadas à força rural.</p></article>
+            <article class="area-card reveal"><span class="area-icon">02</span><h3 class="area-title">Máquinas agrícolas</h3><p class="area-desc">Tratores, implementos, equipamentos e tecnologia para o campo.</p></article>
+            <article class="area-card reveal"><span class="area-icon">03</span><h3 class="area-title">Feira de negócios</h3><p class="area-desc">Ambiente premium para marcas, vendas, relacionamento e oportunidades.</p></article>
+            <article class="area-card reveal"><span class="area-icon">04</span><h3 class="area-title">Arena de shows</h3><p class="area-desc">Palco principal com experiência visual, som, praça de alimentação e ativações.</p></article>
+            <article class="area-card reveal"><span class="area-icon">05</span><h3 class="area-title">Agricultura familiar</h3><p class="area-desc">Produtos locais, cooperativas, associações e valorização regional.</p></article>
+            <article class="area-card reveal"><span class="area-icon">06</span><h3 class="area-title">Gastronomia</h3><p class="area-desc">Sabores do Paraná, operação organizada e áreas de convivência.</p></article>
           </div>
         </div>
-        <div
-          style="
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: rgba(201, 162, 39, 0.05);
-            border: 1px solid rgba(201, 162, 39, 0.15);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-          "
-          class="reveal"
-        >
-          <div>
-            <div style="font-weight: 700; margin-bottom: 0.2rem">
-              Parque de Exposições de Campo do Tenente
-            </div>
-            <div style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.5)">
-              Campo do Tenente – PR | A 70km de Curitiba pela BR-116
-            </div>
-          </div>
-          <a
-            href="https://maps.google.com"
-            target="_blank"
-            class="btn-outline"
-            style="margin-left: auto; white-space: nowrap"
-            >Ver no Mapa</a
-          >
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- NOTÍCIAS -->
-    <section class="noticias" id="noticias">
-      <div class="container">
-        <div
-          class="reveal"
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-          "
-        >
-          <div>
-            <div class="section-badge">Novidades</div>
-            <h2 class="section-title">
-              Últimas <span class="highlight">Notícias</span>
-            </h2>
+      <section class="memorias-section" id="memorias">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="section-badge">Galeria e memórias</div>
+            <h2 class="section-title">Momentos que contam a história do <span class="highlight">CampoAgro</span></h2>
           </div>
-          <a
-            href="https://www.instagram.com/campoagrooficial/"
-            class="btn-outline"
-            target="_blank"
-            rel="noopener"
-            >Ver Instagram</a
-          >
-        </div>
-        <div class="noticias-grid reveal">
-          <div class="noticia-destaque">
-            <div class="noticia-img ni1"></div>
-            <div class="noticia-body">
-              <div class="noticia-cat">Show Confirmado</div>
-              <h3 class="noticia-titulo">
-                Primeira grande atração do CampoAgro 2026 é anunciada
-              </h3>
-              <p class="noticia-resumo">
-                A organização prepara a programação musical da abertura e a
-                expectativa é de grande presença do público regional.
-              </p>
-              <div class="noticia-data">Maio 2026 · CampoAgro Oficial</div>
-            </div>
-          </div>
-          <div class="noticias-lista">
-            <div class="noticia-mini">
-              <div class="noticia-mini-img ni2"><span>AG</span></div>
-              <div class="noticia-mini-body">
-                <div class="noticia-mini-cat">Expositores</div>
-                <div class="noticia-mini-titulo">
-                  Mais de 50 empresas de máquinas confirmadas para 2026
-                </div>
-                <div class="noticia-mini-data">Abril 2026</div>
-              </div>
-            </div>
-            <div class="noticia-mini">
-              <div class="noticia-mini-img ni3"><span>PR</span></div>
-              <div class="noticia-mini-body">
-                <div class="noticia-mini-cat">Agropecuária</div>
-                <div class="noticia-mini-titulo">
-                  Inscrições abertas para concursos de raças bovinas
-                </div>
-                <div class="noticia-mini-data">Abril 2026</div>
-              </div>
-            </div>
-            <div class="noticia-mini">
-              <div
-                class="noticia-mini-img"
-                style="
-                  background: linear-gradient(135deg, #1a3a0a, #2d6a10);
-                  min-width: 80px;
-                  height: 70px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  font-size: 1rem;
-                "
-              >
-                <span>AP</span>
-              </div>
-              <div class="noticia-mini-body">
-                <div class="noticia-mini-cat">Patrocínio</div>
-                <div class="noticia-mini-titulo">
-                  Prefeitura anuncia apoio total ao evento 2026
-                </div>
-                <div class="noticia-mini-data">Março 2026</div>
-              </div>
-            </div>
-            <div class="noticia-mini">
-              <div class="noticia-mini-img ni4"><span>AF</span></div>
-              <div class="noticia-mini-body">
-                <div class="noticia-mini-cat">Agricultura</div>
-                <div class="noticia-mini-titulo">
-                  Espaço da agricultura familiar terá área triplicada
-                </div>
-                <div class="noticia-mini-data">Março 2026</div>
-              </div>
-            </div>
+          <div class="masonry-gallery">
+            <button class="memory-card tall reveal" type="button" data-media-type="image" data-src="assets/img/banner15.png" data-title="Semente do futuro" data-category="CAMPOAGRO 2026"><img src="assets/img/banner15.png" alt="Família plantando no campo" loading="lazy" /><span>Semente do futuro</span></button>
+            <button class="memory-card reveal" type="button" data-media-type="image" data-src="assets/img/joao-nelore-texano.jpg" data-title="João Nelore e Texano" data-category="Shows"><img src="assets/img/joao-nelore-texano.jpg" alt="João Nelore e Texano" loading="lazy" /><span>Shows nacionais</span></button>
+            <button class="memory-card reveal" type="button" data-media-type="image" data-src="assets/img/luan-pereira-tvz-2024.png" data-title="Luan Pereira" data-category="Palco CampoAgro"><img src="assets/img/luan-pereira-tvz-2024.png" alt="Luan Pereira" loading="lazy" /><span>Arena principal</span></button>
+            <button class="memory-card wide reveal" type="button" data-media-type="image" data-src="assets/img/tratoraco/tratoraco-01.png" data-title="Tratoraço" data-category="Tradição rural"><img src="assets/img/tratoraco/tratoraco-01.png" alt="Tratoraço CampoAgro" loading="lazy" /><span>Tradição em movimento</span></button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FOOTER -->
+      <section class="tratoraco-section" id="tratoraco">
+        <div class="container tratoraco-layout">
+          <div class="tratoraco-copy reveal">
+            <div class="section-badge">Tratoraço</div>
+            <h2 class="section-title">A tradição rural toma a avenida</h2>
+            <p>O Tratoraço celebra produtores, famílias e máquinas que movem a economia do campo. Uma experiência visual forte, popular e simbólica dentro do CampoAgro.</p>
+            <div class="tratoraco-stats"><div class="tratoraco-stat"><strong>+100</strong><span>tratores esperados</span></div><div class="tratoraco-stat"><strong>100%</strong><span>identidade rural</span></div></div>
+          </div>
+          <div class="tratoraco-carousel reveal" data-tratoraco-track>
+            <img src="assets/img/tratoraco/tratoraco-01.png" alt="Tratoraço 1" loading="lazy" />
+            <img src="assets/img/tratoraco/tratoraco-02.png" alt="Tratoraço 2" loading="lazy" />
+            <img src="assets/img/tratoraco/tratoraco-03.png" alt="Tratoraço 3" loading="lazy" />
+            <img src="assets/img/tratoraco/tratoraco-04.png" alt="Tratoraço 4" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="patrocinadores" id="patrocinadores">
+        <div class="container">
+          <div class="partners-hero reveal">
+            <div><div class="section-badge">Parceiros oficiais</div><h2 class="section-title">Marcas que fortalecem o maior evento agro da região</h2></div>
+            <a href="#expositores" class="btn-primary">Ver cotas de patrocínio</a>
+          </div>
+          <div class="sponsor-tier sponsor-tier-featured reveal">
+            <div class="sponsor-track">
+              <div class="sponsor-row sponsor-logo-row">
+                <div class="sponsor-logo-strip"><img src="assets/img/campoagro-patrocinadores.png" alt="Patrocinadores e apoiadores oficiais do CampoAgro" loading="lazy" /></div>
+                <div class="sponsor-logo-strip" aria-hidden="true"><img src="assets/img/campoagro-patrocinadores.png" alt="" loading="lazy" /></div>
+              </div>
+            </div>
+          </div>
+          <p class="partners-cta reveal">Associe sua marca ao maior evento agro da região.</p>
+        </div>
+      </section>
+
+      <section class="expositor-section" id="expositores">
+        <div class="container expositor-grid">
+          <div class="reveal">
+            <div class="section-badge">Expositores</div>
+            <h2 class="section-title">Sua marca no centro dos negócios do agro</h2>
+            <p class="section-lead">Espaços comerciais para empresas que querem vender, ativar marca, captar clientes e se posicionar em uma feira com público qualificado.</p>
+            <div class="expo-benefits"><span>Stands comerciais</span><span>Ativações de marca</span><span>Networking regional</span><span>Visibilidade institucional</span></div>
+          </div>
+          <form class="premium-form reveal" aria-label="Formulário de interesse para expositores">
+            <label class="form-group"><span>Nome</span><input type="text" name="nome" placeholder="Seu nome" /></label>
+            <label class="form-group"><span>Empresa</span><input type="text" name="empresa" placeholder="Nome da empresa" /></label>
+            <label class="form-group"><span>Contato</span><input type="tel" name="telefone" placeholder="WhatsApp" /></label>
+            <label class="form-group"><span>Interesse</span><select name="interesse"><option>Quero ser expositor</option><option>Quero patrocinar</option><option>Quero saber sobre ingressos</option></select></label>
+            <label class="form-group full"><span>Mensagem</span><textarea name="mensagem" rows="4" placeholder="Conte rapidamente o que você procura"></textarea></label>
+            <button class="btn-primary" type="button">Enviar interesse</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="mapa-section" id="mapa">
+        <div class="container mapa-layout">
+          <div class="section-head reveal">
+            <div class="section-badge">Mapa do evento</div>
+            <h2 class="section-title">Percurso claro, setores organizados e experiência fluida</h2>
+          </div>
+          <div class="mapa-premium reveal">
+            <div class="map-zone zone-main"><strong>Arena de Shows</strong><span>Palco, praça e ativações</span></div>
+            <div class="map-zone zone-agro"><strong>Feira Agro</strong><span>Máquinas e negócios</span></div>
+            <div class="map-zone zone-food"><strong>Gastronomia</strong><span>Convivência e sabores</span></div>
+            <div class="map-zone zone-family"><strong>Família</strong><span>Kids e agricultura familiar</span></div>
+            <div class="map-path"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="noticias-section" id="noticias">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="section-badge">Últimas notícias</div>
+            <h2 class="section-title">Acompanhe os comunicados oficiais</h2>
+          </div>
+          <div class="news-grid">
+            <article class="news-card news-card-featured reveal"><span>CAMPOAGRO 2026</span><h3>Nova edição reforça inovação, tradição rural e entretenimento no sul do Paraná.</h3><p>O evento reúne feira, negócios, Tratoraço, experiências e shows em uma programação pensada para toda a região.</p><a href="https://www.instagram.com/campoagrooficial/" target="_blank" rel="noopener">Ver no Instagram</a></article>
+            <article class="news-card reveal"><span>Shows</span><h3>João Nelore e Texano confirmados como embaixadores do evento.</h3><a href="#programacao">Ver programação</a></article>
+            <article class="news-card reveal"><span>Expositores</span><h3>Espaços comerciais preparados para marcas do agro, varejo e serviços.</h3><a href="#expositores">Quero participar</a></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <img
-              class="footer-logo"
-              src="assets/img/logo-campoagro.png"
-              alt="CampoAgro Campo do Tenente"
-            />
-            <p>
-              O maior encontro do agronegócio e agricultura familiar da região
-              Sul do Paraná. Cinco dias de negócios, cultura, shows e muito agro
-              em Campo do Tenente.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://www.instagram.com/campoagrooficial/"
-                class="social-btn"
-                title="Instagram"
-                target="_blank"
-                rel="noopener"
-                >IG</a
-              >
-              <a href="#" class="social-btn" title="Facebook">FB</a>
-              <a href="#" class="social-btn" title="YouTube">YT</a>
-              <a href="#" class="social-btn" title="TikTok">TK</a>
-              <a
-                href="https://wa.me/5541999999999"
-                class="social-btn"
-                title="WhatsApp"
-                target="_blank"
-                >WA</a
-              >
-            </div>
-          </div>
-          <div class="footer-col">
-            <h4>Navegação</h4>
-            <ul>
-              <li><a href="#home">Início</a></li>
-              <li><a href="#sobre">Sobre o Evento</a></li>
-              <li><a href="#programacao">Programação</a></li>
-              <li><a href="#areas">Áreas</a></li>
-              <li><a href="#expositores">Expositores</a></li>
-              <li><a href="#memorias">Memórias</a></li>
-              <li><a href="#noticias">Notícias</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Expositores</h4>
-            <ul>
-              <li><a href="#expositores">Seja Expositor</a></li>
-              <li><a href="#">Cotas de Patrocínio</a></li>
-              <li><a href="#">Manual do Expositor</a></li>
-              <li><a href="#">Regulamento</a></li>
-              <li><a href="#">Credenciamento</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contato</h4>
-            <div class="footer-contact-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              Campo do Tenente, PR
-            </div>
-            <div class="footer-contact-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              contato@campoagro.com.br
-            </div>
-            <div class="footer-contact-item">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 13.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013 2.84h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 10a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
-                />
-              </svg>
-              (41) 9 9999-9999
-            </div>
-            <div
-              style="
-                margin-top: 1rem;
-                padding: 0.75rem;
-                background: rgba(201, 162, 39, 0.07);
-                border: 1px solid rgba(201, 162, 39, 0.15);
-                font-size: 0.75rem;
-                color: rgba(255, 255, 255, 0.5);
-              "
-            >
-              Realização:<br />
-              <span style="color: rgba(255, 255, 255, 0.7); font-weight: 600"
-                >Prefeitura de Campo do Tenente</span
-              >
-            </div>
-          </div>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/img/logo-campoagro.png" alt="CampoAgro Campo do Tenente" loading="lazy" />
+          <p>Evento oficial do agro, inovação rural e entretenimento em Campo do Tenente, Paraná.</p>
         </div>
-        <div class="footer-bottom">
-          <p>
-            2026 CampoAgro · Todos os direitos reservados · Campo do Tenente –
-            PR
-          </p>
-          <p>Desenvolvido para o agro paranaense</p>
-        </div>
+        <div><h3>Evento</h3><a href="#sobre">Sobre</a><a href="#programacao">Programação</a><a href="#areas">Áreas</a><a href="#mapa">Mapa</a></div>
+        <div><h3>Participe</h3><a href="#patrocinadores">Patrocinadores</a><a href="#expositores">Expositores</a><a href="https://www.instagram.com/campoagrooficial/" target="_blank" rel="noopener">Instagram oficial</a></div>
+        <div><h3>CAMPOAGRO 2026</h3><p>17 a 19 de julho de 2026<br />Campo do Tenente · PR</p></div>
       </div>
+      <div class="footer-bottom">© 2026 CampoAgro. Todos os direitos reservados.</div>
     </footer>
 
     <div class="media-modal" data-media-modal aria-hidden="true">
-      <button
-        class="media-modal-close"
-        type="button"
-        data-media-close
-        aria-label="Fechar visualização"
-      >
-        Fechar
-      </button>
-      <div class="media-modal-content" data-media-content></div>
-      <div class="media-modal-caption">
-        <span data-media-category></span>
-        <strong data-media-title></strong>
+      <div class="media-modal-panel" role="dialog" aria-modal="true" aria-label="Visualização de mídia">
+        <button type="button" class="media-modal-close" data-media-close aria-label="Fechar">×</button>
+        <div class="media-modal-content" data-media-content></div>
+        <div class="media-modal-meta"><span data-media-category></span><strong data-media-title></strong></div>
       </div>
     </div>
 
