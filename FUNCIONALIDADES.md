@@ -1,30 +1,21 @@
-# CampoAgro 2026 - Funcionalidades Separadas
+# CampoAgro 2026 — Funcionalidades (Next.js)
 
-## Estrutura do projeto
+A landing é servida pela **App Router** do Next (`app/page.tsx` → `HomeLanding`).
 
-- `index.html`: conteudo e secoes principais da pagina.
-- `assets/css/styles.css`: identidade visual, responsividade e animacoes.
-- `assets/css/premium.css`: reformulacao visual premium com nova paleta, responsividade, cards, modal e galeria de memorias.
-- `assets/js/main.js`: inicializa as funcionalidades do site.
-- `assets/js/modules/loading.js`: tela de carregamento.
-- `assets/js/modules/navigation.js`: menu fixo, estado de rolagem e menu mobile.
-- `assets/js/modules/particles.js`: particulas visuais do hero.
-- `assets/js/modules/countdown.js`: contagem regressiva do evento.
-- `assets/js/modules/program-tabs.js`: abas da programacao.
-- `assets/js/modules/reveal.js`: animacoes de entrada ao rolar a pagina.
-- `assets/img/logo-campoagro.png`: logo real do CampoAgro.
+## Onde está cada parte
 
-## Blocos inspirados em sites de eventos
+| Área | Caminho principal |
+|------|-------------------|
+| Seções da home | `app/_components/home/*.tsx` |
+| CSS global legacy + overrides | `public/css/styles.css`, `public/css/premium.css`, `app/etapa4-performance.css`, importados por `app/globals.css` |
+| Imagens estáticas | `public/img/` (subpasta `tratoraco/` para fotos da passeata) |
+| Metadados / layout | `app/layout.tsx` |
+| Alias `/programacao` | `app/programacao/page.tsx` (redireciona para `/#programacao`) |
 
-- Hero com marca, local, chamada para programacao, Tratoraco e expositores.
-- Contagem regressiva para abertura do evento em 17 de julho de 2026, as 18h.
-- Sobre o evento com numeros e pilares.
-- Aba Tratoraco 2025 com narrativa da passeata, estatisticas, fotos centralizadas e link visivel para o acervo publico do Google Drive.
-- Memorias do CampoAgro com carrossel, grid premium, categorias, estatisticas e modal fullscreen.
-- Areas do parque/evento.
-- Programacao por dia em abas.
-- Patrocinadores e cotas.
-- Formulario de interesse para expositores.
-- Mapa visual do evento e chamada para rota.
-- Noticias e atualizacoes.
-- Rodape com navegacao, expositor, contato e realizacao.
+## Comportamentos (Cliente)
+
+Implementados em React (`"use client"`) nos componentes correspondentes: loading, navegação e menu, contagem regressiva, abas da programação, galeria/modal, partículas do hero e reveal ao scroll — ver Etapa 3 no checklist em `docs/checklist-migracao-4-etapas.md`.
+
+## Legado HTML
+
+O site **não** usa mais `index.html` nem JavaScript vanilla em `public/`; desenvolvimento e produção via `npm run dev` / `npm run build`.

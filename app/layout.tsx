@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'shows',
   ],
   icons: {
-    icon: '/assets/img/logo-campoagro.png',
+    icon: '/img/logo-campoagro.png',
   },
 };
 

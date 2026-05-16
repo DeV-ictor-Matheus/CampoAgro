@@ -75,7 +75,7 @@ export default function Navbar() {
     >
       <a href="#home" className="nav-brand" aria-label="CampoAgro 2026 - início">
         <Image
-          src="/assets/img/logo-campoagro.png"
+          src="/img/logo-campoagro.png"
           alt="CampoAgro Campo do Tenente"
           width={220}
           height={72}

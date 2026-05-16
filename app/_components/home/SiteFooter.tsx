@@ -7,7 +7,7 @@ export default function SiteFooter() {
         <div className="footer-brand">
           <Image
             className="footer-logo"
-            src="/assets/img/logo-campoagro.png"
+            src="/img/logo-campoagro.png"
             alt="CampoAgro Campo do Tenente"
             width={220}
             height={72}

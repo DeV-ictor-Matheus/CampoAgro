@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function TratoracoSection() {
   const imgs = [
-    { src: '/assets/img/tratoraco/tratoraco-01.png', alt: 'Tratoraço 1' },
-    { src: '/assets/img/tratoraco/tratoraco-02.png', alt: 'Tratoraço 2' },
-    { src: '/assets/img/tratoraco/tratoraco-03.png', alt: 'Tratoraço 3' },
-    { src: '/assets/img/tratoraco/tratoraco-04.png', alt: 'Tratoraço 4' },
+    { src: '/img/tratoraco/tratoraco-01.png', alt: 'Tratoraço 1' },
+    { src: '/img/tratoraco/tratoraco-02.png', alt: 'Tratoraço 2' },
+    { src: '/img/tratoraco/tratoraco-03.png', alt: 'Tratoraço 3' },
+    { src: '/img/tratoraco/tratoraco-04.png', alt: 'Tratoraço 4' },
   ] as const;
 
   return (

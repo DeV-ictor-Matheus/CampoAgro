@@ -21,28 +21,28 @@ const CARDS: Array<{
 }> = [
   {
     variant: 'tall',
-    src: '/assets/img/banner15.png',
+    src: '/img/banner15.png',
     title: 'Semente do futuro',
     category: 'CAMPOAGRO 2026',
     caption: 'Semente do futuro',
   },
   {
     variant: '',
-    src: '/assets/img/joao-nelore-texano.jpg',
+    src: '/img/joao-nelore-texano.jpg',
     title: 'João Nelore e Texano',
     category: 'Shows',
     caption: 'Shows nacionais',
   },
   {
     variant: '',
-    src: '/assets/img/luan-pereira-tvz-2024.png',
+    src: '/img/luan-pereira-tvz-2024.png',
     title: 'Luan Pereira',
     category: 'Palco CampoAgro',
     caption: 'Arena principal',
   },
   {
     variant: 'wide',
-    src: '/assets/img/tratoraco/tratoraco-01.png',
+    src: '/img/tratoraco/tratoraco-01.png',
     title: 'Tratoraço',
     category: 'Tradição rural',
     caption: 'Tradição em movimento',

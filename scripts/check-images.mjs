@@ -1,4 +1,4 @@
-/* Verifica referências /assets/img/ em app/ e em .html/.css em public/ */
+/* Verifica referências /img/ em app/ e .css em public/ */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
@@ -14,14 +14,18 @@ function walkFiles(dir, exts, out = []) {
   return out;
 }
 
-function collectRefs(content) {
+function collectImgRefs(content) {
   const refs = new Set();
-  const re = /\/assets\/img\/[^\s"'`)]+/g;
+  const abs = /\/img\/[^\s"'`)]+/g;
   let m;
-  while ((m = re.exec(content)) !== null) {
-    let path = m[0];
-    path = path.replace(/\)[;,]?$/, '').split('?')[0].split('#')[0];
-    refs.add(path);
+  while ((m = abs.exec(content)) !== null) {
+    const p = m[0].split('?')[0].split('#')[0];
+    refs.add(p);
+  }
+  const rel = /\.\.\/img\/([^\s"'`)]+)/g;
+  while ((m = rel.exec(content)) !== null) {
+    const file = m[1].split('?')[0].split('#')[0];
+    refs.add(`/img/${file}`);
   }
   return refs;
 }
@@ -34,7 +38,7 @@ const files = [
 const allRefs = new Set();
 for (const file of files) {
   const content = readFileSync(file, 'utf8');
-  for (const ref of collectRefs(content)) allRefs.add(ref);
+  for (const ref of collectImgRefs(content)) allRefs.add(ref);
 }
 
 const missing = [...allRefs].filter((ref) => !existsSync(join(ROOT, 'public', ref.replace(/^\//, ''))));

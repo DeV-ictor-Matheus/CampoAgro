@@ -29,7 +29,7 @@ export default function LoadingOverlay() {
     <div id="loading" className={hidden ? 'hidden' : undefined} aria-label="Carregando CampoAgro">
       <Image
         className="loading-logo"
-        src="/assets/img/logo-campoagro.png"
+        src="/img/logo-campoagro.png"
         alt="CampoAgro Campo do Tenente"
         width={280}
         height={90}

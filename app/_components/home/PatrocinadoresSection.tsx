@@ -18,7 +18,7 @@ export default function PatrocinadoresSection() {
             <div className="sponsor-row sponsor-logo-row">
               <div className="sponsor-logo-strip">
                 <Image
-                  src="/assets/img/campoagro-patrocinadores.png"
+                  src="/img/campoagro-patrocinadores.png"
                   alt="Patrocinadores e apoiadores oficiais do CampoAgro"
                   width={1120}
                   height={96}
@@ -28,7 +28,7 @@ export default function PatrocinadoresSection() {
               </div>
               <div className="sponsor-logo-strip" aria-hidden="true">
                 <Image
-                  src="/assets/img/campoagro-patrocinadores.png"
+                  src="/img/campoagro-patrocinadores.png"
                   alt=""
                   width={1120}
                   height={96}

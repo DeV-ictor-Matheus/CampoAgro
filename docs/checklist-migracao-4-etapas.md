@@ -10,18 +10,9 @@ Referência de arquivos atuais relevantes:
 | `app/etapa4-performance.css` | Hero sem PNG duplicado no BG, blur mais leve, `prefers-reduced-motion`, notícia destaque |
 | `app/_components/HomeLanding.tsx` | Orquestra as seções em `home/*.tsx` |
 | `app/_components/home/` | Um TSX por seção da landing (Etapa 2) |
-| `public/index.html` | Opcional hospedagem estática; mantido alinhado; prioridade de edição: TSX |
-| `public/assets/css/styles.css` | Estilos base |
-| `public/assets/css/premium.css` | Estilos premium (blur, hero, cards) |
-| `public/assets/js/main.js` | Orquestra módulos |
-| `public/assets/js/modules/loading.js` | Overlay de carregamento |
-| `public/assets/js/modules/navigation.js` | Nav / menu |
-| `public/assets/js/modules/particles.js` | Partículas do hero |
-| `public/assets/js/modules/countdown.js` | Contagem regressiva |
-| `public/assets/js/modules/program-tabs.js` | Abas (`data-tab` + delegação em `.prog-tabs`; `window.showTab` mantido) |
-| `public/assets/js/modules/reveal.js` | IntersectionObserver + `.reveal` |
-| `public/assets/js/modules/memories.js` | Modal da galeria |
-| `public/assets/img/` | Imagens (`banner15.png`, `banner2.png`, …) |
+| `public/css/styles.css` | Estilos base (URLs relativas `../img/…`) |
+| `public/css/premium.css` | Estilos premium |
+| `public/img/` | Imagens estáticas (`tratoraco/` incluído) |
 | `next.config.mjs` | `images.remotePatterns` (hoje focado em URLs remotas) |
 | `tailwind.config.ts` / `postcss.config.js` | Tailwind (pouco usado nas rotas `app/` hoje) |
 | `package.json` | Scripts `dev`, `build`, `lint`, `check:images` → `scripts/check-images.mjs` |
@@ -40,7 +31,7 @@ Use os checkboxes abaixo conforme for concluindo cada item.
 - [x] Alterar `app/page.tsx`: remover `readFileSync` + `iframe` (ou equivalente definido na estratégia).
 - [x] Garantir que `lang="pt-BR"` e equivalência SEO: conferir `app/layout.tsx` (`metadata`) vs `<title>` / meta em `public/index.html`.
 - [x] Incluir estilos da home no fluxo Next: importar ou `@import` de `styles.css` e `premium.css` (ex.: `app/globals.css` que importa os dois — criar se necessário — e import em `app/layout.tsx`).
-- [x] Ajustar caminhos de assets: de `href="assets/..."` (relativo ao HTML) para `/assets/...` (absoluto a partir de `public/`) onde o JSX exigir.
+- [x] Ajustar caminhos públicos (`/css/`, `/img/` na raíz de `public/`).
 - [x] JS vanilla sem `onclick` no React: delegação nas abas (`data-tab`) e listener em `#hamburger` (`navigation.js`).
 - [x] Rodar `npm run dev` e `npm run build` sem erros.
 
@@ -85,7 +76,7 @@ Use os checkboxes abaixo conforme for concluindo cada item.
 
 ## Etapa 3 — Interatividade em React (`"use client"`)
 
-**Meta:** comportamentos em `public/assets/js/modules/*.js` replicados em Client Components na home Next.
+**Meta:** comportamentos antigos dos módulos JS (removidos) replicados em Client Components (`app/_components/home/*`).
 
 - [x] Loading: `LoadingOverlay.tsx` (`load` + timeout, classe `hidden`).
 - [x] Navegação: `Navbar.tsx` (scroll `scrolled`, `menu-open`, spy de seção, hash + `scrollIntoView` suave).
@@ -96,11 +87,12 @@ Use os checkboxes abaixo conforme for concluindo cada item.
 - [x] Partículas: `HeroParticles.tsx` (só cliente; desliga com `prefers-reduced-motion`).
 - [x] `prefers-reduced-motion` aplicado às partículas.
 - [x] Removido `next/script` / `main.js` de `app/page.tsx`.
-- [x] `public/index.html`: continua com `<script type="module" src="/assets/js/main.js">` para **deploy estático** que não passa pelo Next; a home em `/` não usa mais esses módulos.
 
 **Critério de pronto:** interações na rota `/` só com bundle Next.
 
-**Status:** concluída para a app Next. Módulos em `public/assets/js/` permanecem para `index.html` opcional.
+**Nota:** Espelho estático `public/index.html` + `public/assets/js/` foi removido na consolidação de `public/` (ver Etapa 4 / nota final).
+
+**Status:** concluída para a app Next.
 
 ---
 
@@ -111,7 +103,7 @@ Use os checkboxes abaixo conforme for concluindo cada item.
 - [x] **`next/image`** na home: hero (`priority` + `sizes`), logos (nav/loading/footer), editorial (`fill`), carrossel Tratoraço, faixa de patrocinadores, galeria (`fill`), modal da galeria, card de notícia em destaque (`fill`).
 - [x] **Hero:** foto principal via `<Image fill>` + `.hero-bg` só com gradientes (sem URL duplicada do PNG em CSS — ver `app/etapa4-performance.css`).
 - [x] **Notícia em destaque:** classe `news-card-featured--optimized` + camada `<Image>`; remove background-image pesado no CSS para esse card.
-- [x] **`scripts/check-images.mjs`** — valida paths `/assets/img/` em `app/` e `public/**/*.html|.css`; comando `npm run check:images`.
+- [x] **`scripts/check-images.mjs`** — referências `/img/…` e `url(../img/…)` em CSS; `npm run check:images`.
 - [x] **Backdrop/blur:** valores mais baixos nos cards repetidos, modal e elementos-chave (mantém vidro, menos custo na GPU).
 - [x] **`prefers-reduced-motion`:** hero drift, sponsors, WhatsApp, loading bar, scroll cue, partículas (complementa `HeroParticles`).
 - [ ] **Lighthouse / métricas:** rodar manualmente quando quiser registrar baseline (LCP tende a ganhar com hero otimizado pelo pipeline do Next).
@@ -119,7 +111,9 @@ Use os checkboxes abaixo conforme for concluindo cada item.
 
 **Critério de pronto:** assets servidos pelo otimizador do Next onde aplicável; menos blur/agitação por defeito e com respeito à preferência do utilizador.
 
-**Nota:** os ficheiros PNG/JPG originais em `public/assets/img/` mantêm-se; em browsers compatíveis o Next **serve WebP/AVIF** derivados em tempo de pedido/build. Para peso em disco ainda menor no CDN, pode comprimir ou gerar `.webp` à parte mais tarde.
+**Nota:** PNG/JPG em `public/img/`; Next pode servir WebP/AVIF no pedido.
+
+**Consolidação `public/`:** `public/assets/{css,img}` fundiu-se em `public/css` e `public/img`; removidos `index.html`, pasta `js/` e `server.mjs` (servidor estático legado).
 
 **Status:** concluída para o âmbito definido acima.
 
@@ -129,7 +123,7 @@ Use os checkboxes abaixo conforme for concluindo cada item.
 
 Etapa **1 → 2 → 3 → 4** (não pule a 1 antes de aumentar JSX na home).
 
-Etapa 4 pode começar **parcialmente** antes (ex.: otimização de PNGs), desde que não conflite com URLs ainda fixas em HTML antigo — ideal concentrar merge de imagens quando `next/image` ou paths estáveis já estiverem definidos na etapa 2–3.
+Etapa 4 pode começar **parcialmente** antes (ex.: otimização de PNGs), desde que paths em `app/` e CSS usem `public/img` consistentemente.
 
 ---
 

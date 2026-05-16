@@ -28,7 +28,7 @@ export default function SobreSection() {
         </div>
         <div className="editorial-visual reveal">
           <Image
-            src="/assets/img/banner15.png"
+            src="/img/banner15.png"
             alt="Família plantando uma muda no campo ao pôr do sol"
             fill
             sizes="(max-width: 900px) 100vw, 55vw"
