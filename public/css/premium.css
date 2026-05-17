@@ -2128,8 +2128,8 @@ button.btn-primary {
 .sponsor-row:hover { animation-play-state: paused; }
 .sponsor-slide { flex: 0 0 auto; }
 .sponsor-logo-strip { min-width: 1040px; padding: clamp(1rem, 2vw, 1.5rem) clamp(1.2rem, 3vw, 2.2rem); }
-.sponsor-logo-strip img { width: min(92vw, 1120px); max-height: 98px; object-fit: contain; opacity: .78; filter: grayscale(1) drop-shadow(0 18px 34px rgba(0,0,0,.44)); transition: opacity .35s var(--cg-ease), filter .35s var(--cg-ease), transform .35s var(--cg-ease); }
-.sponsor-track:hover .sponsor-logo-strip img { opacity: 1; filter: grayscale(0) drop-shadow(0 18px 34px rgba(0,0,0,.44)); transform: translateY(-2px); }
+.sponsor-logo-strip img { width: min(92vw, 1120px); max-height: 98px; object-fit: contain; opacity: .98; filter: drop-shadow(0 18px 34px rgba(0,0,0,.44)); transition: opacity .35s var(--cg-ease), filter .35s var(--cg-ease), transform .35s var(--cg-ease); }
+.sponsor-track:hover .sponsor-logo-strip img { opacity: 1; filter: drop-shadow(0 18px 34px rgba(0,0,0,.44)); transform: translateY(-2px); }
 .partners-cta { margin: 1.5rem 0 0; color: var(--cg-muted); text-align: center; }
 
 
