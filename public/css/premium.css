@@ -2285,3 +2285,16 @@ footer a:hover { color: var(--cg-gold-bright); }
 .footer-logo {
   filter: none;
 }
+
+/* Botão primário e WhatsApp flutuante — sem sombra externa */
+.btn-primary,
+.btn-primary:hover,
+button.btn-primary,
+button.btn-primary:hover {
+  box-shadow: none;
+}
+
+.whatsapp-float,
+.whatsapp-float:hover {
+  box-shadow: none;
+}
