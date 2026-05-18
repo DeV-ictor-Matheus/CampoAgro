@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className="hero hero-v5" id="home" aria-label="CampoAgro 2026">
       <div className="hero-bg-photo" aria-hidden>
         <Image
-          src="/img/banner15.png"
+          src="/img/valtrabanner.png"
           alt=""
           fill
           priority

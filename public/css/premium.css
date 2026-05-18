@@ -1977,7 +1977,7 @@ nav.scrolled {
     linear-gradient(90deg, rgba(4,4,4,.84) 0%, rgba(7,17,10,.62) 31%, rgba(7,17,10,.16) 58%, rgba(4,4,4,.12) 100%),
     linear-gradient(180deg, rgba(4,4,4,.14) 0%, rgba(4,4,4,.04) 46%, rgba(4,4,4,.86) 100%),
     radial-gradient(circle at 12% 42%, rgba(212,166,58,.22), transparent 28rem),
-    url('../img/banner15.png') center center / cover no-repeat;
+    url('../img/valtrabanner.png') center center / cover no-repeat;
 }
 .hero-grid { position: absolute; inset: 0; z-index: -3; opacity: .24; background-image: linear-gradient(rgba(212,166,58,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(212,166,58,.08) 1px, transparent 1px); background-size: 90px 90px; mask-image: linear-gradient(180deg, transparent, #000 16%, #000 72%, transparent); }
 .hero-particles { position: absolute; inset: 0; z-index: -2; pointer-events: none; }
@@ -1986,7 +1986,44 @@ nav.scrolled {
 .hero-light-one { width: min(36vw, 520px); aspect-ratio: 1; left: -8vw; top: 18vh; background: radial-gradient(circle, rgba(212,166,58,.22), transparent 64%); }
 .hero-light-two { width: min(28vw, 420px); aspect-ratio: 1; right: 10vw; bottom: 9vh; background: radial-gradient(circle, rgba(13,31,18,.55), transparent 68%); }
 .hero-content { position: relative; z-index: 3; width: min(100%, 760px); max-width: 760px; margin: 0; padding: 0; text-align: left; align-items: flex-start; }
-.hero-badge { margin-bottom: 1.2rem; padding: .7rem 1rem; border: 1px solid rgba(212,166,58,.28); border-radius: 999px; background: rgba(4,4,4,.36); backdrop-filter: blur(16px); box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+.hero-badge {
+  margin-bottom: 1.2rem;
+  padding: .62rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(212,166,58,.22);
+  background: rgba(4,4,4,.26);
+  backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
+  font-family: "Barlow Condensed", "Bebas Neue", Inter, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: .72rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,214,120,1) 0%, rgba(212,166,58,0.95) 44%, rgba(212,166,58,0.0) 72%);
+  box-shadow: 0 0 0 6px rgba(212,166,58,.10), 0 0 34px rgba(212,166,58,.25);
+}
+
+.hero-badge::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(212,166,58,.0), rgba(212,166,58,.26), rgba(57,208,0,.12), rgba(212,166,58,.0));
+  opacity: .55;
+  mask-image: linear-gradient(#000, #000);
+}
 .hero-title { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; margin: 0; font-family: "Barlow Condensed", Bebas Neue, Inter, sans-serif; font-size: clamp(4.8rem, 10vw, 10.8rem); line-height: .82; letter-spacing: 0; color: #fff; text-wrap: balance; }
 .hero-title .year { display: block; margin-bottom: .7rem; color: rgba(245,245,245,.58); font-family: Inter, sans-serif; font-size: clamp(.8rem, 1vw, 1rem); font-weight: 900; line-height: 1; letter-spacing: .38em; text-transform: uppercase; }
 .hero-tagline { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; margin: 1.2rem 0 .8rem; color: var(--cg-gold-bright); font-family: Barlow, Inter, sans-serif; font-size: clamp(1.05rem, 1.7vw, 1.45rem); font-weight: 700; letter-spacing: .08em; }
@@ -2160,7 +2197,7 @@ button.btn-primary {
 
 .news-grid { display: grid; grid-template-columns: 1.3fr .85fr .85fr; gap: 1rem; align-items: stretch; }
 .news-card { border-radius: 24px; padding: 1.35rem; min-height: 260px; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .34s var(--cg-ease), border-color .34s var(--cg-ease); }
-.news-card-featured { min-height: 340px; background: linear-gradient(180deg, rgba(4,4,4,.18), rgba(4,4,4,.86)), url('../img/banner15.png') center / cover no-repeat; }
+.news-card-featured { min-height: 340px; background: linear-gradient(180deg, rgba(4,4,4,.18), rgba(4,4,4,.86)), url('../img/valtrabanner.png') center / cover no-repeat; }
 .news-card span { color: var(--cg-gold-bright); font-size: .72rem; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
 .news-card h3 { margin: .7rem 0; color: #fff; font-size: clamp(1.2rem, 2vw, 2rem); line-height: 1.1; }
 .news-card p { color: var(--cg-muted); line-height: 1.7; }

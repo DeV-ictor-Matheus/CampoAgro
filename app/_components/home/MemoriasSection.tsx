@@ -21,7 +21,7 @@ const CARDS: Array<{
 }> = [
   {
     variant: 'tall',
-    src: '/img/banner15.png',
+    src: '/img/valtrabanner.png',
     title: 'Semente do futuro',
     category: 'CAMPOAGRO 2026',
     caption: 'Semente do futuro',
