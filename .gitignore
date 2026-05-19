@@ -26,6 +26,10 @@ yarn-error.log*
 .env*.local
 .env
 
+# demo leads / email previews (local tests)
+/data/leads-demo.json
+/data/email-previews/
+
 # vercel
 .vercel
 
