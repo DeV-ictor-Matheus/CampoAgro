@@ -11,8 +11,8 @@ export const PATROCINIO_OPTIONS = [
 ] as const;
 
 export const INGRESSO_OPTIONS = [
-  { value: 'vip', label: 'VIP — Acesso à proximidade do palco' },
-  { value: 'camarote', label: 'Camarote — Lateral do palco' },
+  { value: 'vip', label: 'VIP - Acesso à proximidades do palco' },
+  { value: 'camarote', label: 'CAMAROTE - Acesso à lateral do palco' },
 ] as const;
 
 export type InteresseValue = (typeof INTERESSE_OPTIONS)[number]['value'];
