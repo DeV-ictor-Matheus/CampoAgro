@@ -1,5 +1,9 @@
 import { google } from 'googleapis';
 
+import {
+  getGoogleServiceAccountCredentials,
+  isGoogleServiceAccountConfigured,
+} from './google-credentials';
 import type { ExpositorLeadPayload } from './types';
 import { ingressoLabel, patrocinioLabel } from './types';
 
@@ -13,19 +17,18 @@ const TAB_MAP: Record<ExpositorLeadPayload['interesse'], { name: string; range: 
 
 export function isGoogleSheetsConfigured(): boolean {
   return Boolean(
-    process.env.GOOGLE_SHEETS_SPREADSHEET_ID &&
-      process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL &&
-      process.env.GOOGLE_PRIVATE_KEY,
+    process.env.GOOGLE_SHEETS_SPREADSHEET_ID && isGoogleServiceAccountConfigured(),
   );
 }
 
 function getSheetsClient() {
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+  const credentials = getGoogleServiceAccountCredentials();
 
-  if (!email || !privateKey) {
+  if (!credentials) {
     throw new Error('Credenciais do Google Sheets não configuradas.');
   }
+
+  const { email, privateKey } = credentials;
 
   const auth = new google.auth.JWT({
     email,

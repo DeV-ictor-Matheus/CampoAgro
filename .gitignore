@@ -26,6 +26,9 @@ yarn-error.log*
 .env.local
 .env
 
+# Google service account (baixe o JSON no Google Cloud Console)
+/credentials/google-service-account.json
+
 # demo leads / email previews (local tests)
 /data/leads-demo.json
 /data/email-previews/

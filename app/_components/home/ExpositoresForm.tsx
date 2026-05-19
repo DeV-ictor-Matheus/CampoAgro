@@ -46,6 +46,19 @@ function isInteresseValue(value: string | null): value is InteresseValue {
   return value === 'expositor' || value === 'patrocinador' || value === 'ingresso';
 }
 
+function buildSuccessFeedback(
+  payload: ExpositorLeadResponse,
+  submittedEmail: string,
+): string {
+  let message = 'Registramos seu interesse na participação do evento CampoAgro 2026.';
+
+  if (payload.email.sent) {
+    message += ` Enviamos um e-mail de confirmação para ${submittedEmail}.`;
+  }
+
+  return message;
+}
+
 function buildPayload(form: FormState & { interesse: InteresseValue }) {
   const base = {
     interesse: form.interesse,
@@ -110,7 +123,29 @@ export default function ExpositoresForm() {
     return 'Enviar e continuar no WhatsApp';
   }, [status]);
 
+  function resetFormAfterSubmit() {
+    const fromQuery = searchParams.get('interesse');
+    if (!isInteresseValue(fromQuery)) {
+      setForm(INITIAL);
+      return;
+    }
+
+    const next: FormState = { ...INITIAL, interesse: fromQuery };
+    if (fromQuery === 'ingresso') {
+      next.tipoIngresso = INGRESSO_OPTIONS[0].value;
+    } else if (fromQuery === 'patrocinador') {
+      next.tipoPatrocinio = PATROCINIO_OPTIONS[0].value;
+    }
+    setForm(next);
+  }
+
   function updateField<K extends keyof FormState>(name: K, value: FormState[K]) {
+    if (status === 'success') {
+      setStatus('idle');
+      setFeedback('');
+      setManualWhatsAppUrl(null);
+    }
+
     setForm((current) => {
       const next = { ...current, [name]: value };
       if (name === 'interesse') {
@@ -134,6 +169,28 @@ export default function ExpositoresForm() {
 
   function selectInteresse(interesse: InteresseValue) {
     updateField('interesse', interesse);
+  }
+
+  function renderFormStatus(visible: boolean) {
+    if (!visible || !feedback) return null;
+
+    return (
+      <p
+        className={`form-status ${status === 'error' ? 'form-status--error' : 'form-status--success'}`}
+        role="status"
+      >
+        {feedback}
+        {status === 'success' && manualWhatsAppUrl ? (
+          <>
+            {' '}
+            <a href={manualWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+              Clique aqui para entrar em contato
+            </a>
+            .
+          </>
+        ) : null}
+      </p>
+    );
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -162,21 +219,11 @@ export default function ExpositoresForm() {
         throw new Error(payload.error ?? 'Não foi possível enviar. Tente novamente.');
       }
 
+      const submittedEmail = form.email;
+
+      resetFormAfterSubmit();
       setStatus('success');
-
-      const storageNote = payload.storage.sheets
-        ? ' Registramos seu interesse na planilha da equipe.'
-        : '';
-
-      const emailNote = payload.email.sent
-        ? ` Enviamos um e-mail de confirmação para ${form.email}.`
-        : payload.email.demo
-          ? ` Modo demonstração: confira o preview em ${payload.email.previewPath ?? 'data/email-previews/'}.`
-          : '';
-
-      setFeedback(
-        `Interesse registrado.${storageNote}${emailNote} Se o WhatsApp não abrir, use o link abaixo.`,
-      );
+      setFeedback(buildSuccessFeedback(payload, submittedEmail));
       setManualWhatsAppUrl(payload.whatsappUrl);
 
       window.open(payload.whatsappUrl, '_blank', 'noopener,noreferrer');
@@ -196,11 +243,7 @@ export default function ExpositoresForm() {
       <div className="form-stack">
         <InterestPicker value={form.interesse} onChange={selectInteresse} />
 
-        {feedback && !hasInteresse ? (
-          <p className="form-status form-status--error" role="status">
-            {feedback}
-          </p>
-        ) : null}
+        {renderFormStatus(!hasInteresse)}
 
         {hasInteresse ? (
           <>
@@ -320,24 +363,13 @@ export default function ExpositoresForm() {
               Ao enviar, você concorda em ser contatado sobre o CampoAgro 2026 com os dados informados.
             </p>
 
-            {feedback ? (
-              <p
-                className={`form-status ${status === 'error' ? 'form-status--error' : 'form-status--success'}`}
-                role="status"
-              >
-                {feedback}
-                {manualWhatsAppUrl ? (
-                  <>
-                    {' '}
-                    <a href={manualWhatsAppUrl} target="_blank" rel="noopener noreferrer">
-                      Abrir WhatsApp manualmente
-                    </a>
-                  </>
-                ) : null}
-              </p>
-            ) : null}
+            {renderFormStatus(hasInteresse)}
 
-            <button className="btn-primary form-submit" type="submit" disabled={status === 'loading'}>
+            <button
+              className="btn-primary form-submit"
+              type="submit"
+              disabled={status === 'loading' || status === 'success'}
+            >
               {submitLabel}
             </button>
           </>
