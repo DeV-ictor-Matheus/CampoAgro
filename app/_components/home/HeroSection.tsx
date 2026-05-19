@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 import HeroParticles from "./HeroParticles";
 
@@ -45,7 +45,7 @@ export default function HeroSection() {
             <a href="#atracoes" className="btn-primary">
               Ver programação
             </a>
-            <a href="#contato" className="btn-outline">
+            <a href="?interesse=ingresso#expositores" className="btn-outline">
               Comprar ingresso
             </a>
           </div>
