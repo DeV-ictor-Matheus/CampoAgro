@@ -150,8 +150,14 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <a href="#contato" className="nav-buy">
-        Comprar ingresso
+      <a
+        href="https://www.instagram.com/campoagrooficial/"
+        className="nav-buy"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram oficial CampoAgro (abre em nova aba)"
+      >
+        Instagram
       </a>
       <button
         className="hamburger"
