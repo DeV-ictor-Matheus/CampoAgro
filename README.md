@@ -1,6 +1,6 @@
 # CampoAgro 2026 · Site Oficial
 
-Site institucional do festival CampoAgro 2026, construído em **Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion**.
+Site institucional do festival CampoAgro 2026, construído em **Next.js 14 (App Router) + TypeScript** (estilos em CSS legacy; Tailwind configurado mas pouco usado nos TSX).
 
 > Migração do protótipo HTML para uma arquitetura moderna, modular e pronta pra produção.
 
@@ -102,7 +102,6 @@ Edite o TSX da secção em `app/_components/home/` (ex.: `ProgramacaoSection.tsx
 | `next` | 14.2 | Framework + SSR + App Router |
 | `react` | 18.3 | UI |
 | `tailwindcss` | 3.4 | Estilo |
-| `framer-motion` | 11 | Animações |
 | `lucide-react` | 0.414 | Ícones (substitui emojis) |
 | `clsx` | 2 | Concatenação condicional de classes |
 

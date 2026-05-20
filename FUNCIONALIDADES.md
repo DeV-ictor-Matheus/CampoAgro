@@ -2,15 +2,20 @@
 
 A landing é servida pela **App Router** do Next (`app/page.tsx` → `HomeLanding`).
 
+Mapa completo de pastas e ordem das seções: [`docs/ESTRUTURA-PROJETO.md`](./docs/ESTRUTURA-PROJETO.md).  
+Cadeia de CSS: [`app/styles/README.md`](./app/styles/README.md).
+
 ## Onde está cada parte
 
 | Área | Caminho principal |
 |------|-------------------|
-| Seções da home | `app/_components/home/*.tsx` |
-| CSS global legacy + overrides | `public/css/styles.css`, `public/css/premium.css`, `app/etapa4-performance.css`, importados por `app/globals.css` |
+| Orquestração da home | `app/_components/HomeLanding.tsx` |
+| Seções da home | `app/_components/home/*.tsx` (14 blocos no `<main>`) |
+| CSS global legacy + overrides | `public/css/styles.css`, `public/css/premium.css`, `app/etapa4-performance.css`, `app/campoagro-standard.css` → `app/globals.css` |
 | Imagens estáticas | `public/img/` (subpasta `tratoraco/` para fotos da passeata) |
 | Metadados / layout | `app/layout.tsx` |
 | Alias `/programacao` | `app/programacao/page.tsx` (redireciona para `/#programacao`) |
+| Formulário expositores | `ExpositoresSection.tsx` + `POST /api/leads/expositor` |
 
 ## Comportamentos (Cliente)
 

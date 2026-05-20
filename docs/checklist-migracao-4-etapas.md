@@ -61,7 +61,7 @@ Use os checkboxes abaixo conforme for concluindo cada item.
   - [x] `PatrocinadoresSection.tsx` (`#patrocinadores`)
   - [x] `ExpositoresSection.tsx` (`#expositores` + formulário)
   - [x] `MapaSection.tsx` (`#mapa`)
-  - [x] `NoticiasSection.tsx` (`#noticias`)
+  - [x] ~~`NoticiasSection.tsx`~~ removido (redundante; nav “Notícias” → `#memorias`)
   - [x] `SiteFooter.tsx`
   - [x] Modal de mídia integrado em `MemoriasSection.tsx` (portal em `document.body`)
 - [x] Prioridade de edição: TSX em `app/_components/`; `public/index.html` só para espelho estático — evitar divergência.

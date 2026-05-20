@@ -7,11 +7,14 @@ import HeroSection from './home/HeroSection';
 import LoadingOverlay from './home/LoadingOverlay';
 import MemoriasSection from './home/MemoriasSection';
 import Navbar from './home/Navbar';
+import NumbersSection from './home/NumbersSection';
 import PatrocinadoresSection from './home/PatrocinadoresSection';
+import ProgramacaoSection from './home/ProgramacaoSection';
 import RevealOnScroll from './home/RevealOnScroll';
 import SiteFooter from './home/SiteFooter';
 import ShowsSection from './home/ShowsSection';
 import SobreSection from './home/SobreSection';
+import TratoracoSection from './home/TratoracoSection';
 import WhatsAppFloat from './home/WhatsAppFloat';
 
 export default function HomeLanding() {
@@ -24,9 +27,12 @@ export default function HomeLanding() {
         <HeroSection />
         <SobreSection />
         <CountdownSection />
+        <NumbersSection />
         <AttractionsSection />
         <ShowsSection />
         <AreasSection />
+        <ProgramacaoSection />
+        <TratoracoSection />
         <ExpositoresSection />
         <PatrocinadoresSection />
         <MemoriasSection />
@@ -37,3 +43,4 @@ export default function HomeLanding() {
     </>
   );
 }
+
