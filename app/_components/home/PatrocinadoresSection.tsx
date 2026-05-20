@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import TrackLink from '@/app/_components/analytics/TrackLink';
+
 export default function PatrocinadoresSection() {
   return (
     <section className="patrocinadores premium-sponsors" id="patrocinadores">
@@ -11,9 +13,9 @@ export default function PatrocinadoresSection() {
               Marcas e instituições que fortalecem o <span className="highlight">CampoAgro</span>
             </h2>
           </div>
-          <a href="#contato" className="btn-primary">
+          <TrackLink href="#expositores" className="btn-primary" trackEvent="patrocinador_cota_click">
             Ver cotas premium
-          </a>
+          </TrackLink>
         </div>
 
         <div className="sponsor-tier sponsor-tier-featured reveal">

@@ -3,6 +3,9 @@ import type { ReactNode } from 'react';
 
 import './globals.css';
 
+import ClarityScript from './_components/analytics/ClarityScript';
+import CookieBanner from './_components/consent/CookieBanner';
+
 export const viewport: Viewport = {
   themeColor: '#040404',
 };
@@ -42,7 +45,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body style={{ margin: 0 }}>{children}</body>
+      <body style={{ margin: 0 }}>
+        {children}
+        <CookieBanner />
+        <ClarityScript />
+      </body>
     </html>
   );
 }

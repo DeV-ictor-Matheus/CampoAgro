@@ -1,5 +1,6 @@
 ﻿import Image from "next/image";
 
+import HeroButtons from "./HeroButtons";
 import HeroParticles from "./HeroParticles";
 
 export default function HeroSection() {
@@ -50,14 +51,7 @@ export default function HeroSection() {
             <span>Shows nacionais</span>
             <span>Tratoraço</span>
           </div>
-          <div className="hero-buttons">
-            <a href="?interesse=ingresso#expositores" className="btn-primary">
-              Comprar ingresso
-            </a>
-            <a href="#atracoes" className="btn-outline">
-              Ver programação
-            </a>
-          </div>
+          <HeroButtons />
         </div>
       </div>
 

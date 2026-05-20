@@ -5,13 +5,14 @@ import { Instagram } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
+import { useClarityTrack } from '@/hooks/useClarityTrack';
+
 const HASH_LINK_SECTION_IDS = [
   'sobre',
   'atracoes',
   'areas',
   'expositores',
   'memorias',
-  'contato',
 ] as const;
 
 const SECTION_GAP_PX = 28;
@@ -58,6 +59,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
   const pendingNavId = useRef<string | null>(null);
+  const track = useClarityTrack();
 
   useEffect(() => {
     const sections = HASH_LINK_SECTION_IDS.map((id) => document.getElementById(id)).filter(
@@ -123,7 +125,7 @@ export default function Navbar() {
       className={clsx('site-nav-premium header-reference', scrolled && 'scrolled', menuOpen && 'menu-open')}
       aria-label="Navegação principal"
     >
-      <a href="#home" className="nav-brand" aria-label="CampoAgro 2026 - início">
+      <a href="#home" className="nav-brand" aria-label="CampoAgro 2026 - início" onClick={() => track('header_logo_click')}>
         <Image
           src="/img/logo-campoagro.png"
           alt="CampoAgro Campo do Tenente"
@@ -141,10 +143,9 @@ export default function Navbar() {
           ['areas', 'Estrutura'],
           ['expositores', 'Expositores'],
           ['memorias', 'Memória'],
-          ['contato', 'Contato'],
         ].map(([id, label]) => (
           <li key={id}>
-            <a href={`#${id}`} className={activeId === id ? 'active' : undefined}>
+            <a href={`#${id}`} className={activeId === id ? 'active' : undefined} onClick={() => track(`nav_${id}_click`)}>
               {label}
             </a>
           </li>
@@ -156,6 +157,7 @@ export default function Navbar() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram oficial CampoAgro (abre em nova aba)"
+        onClick={() => track('social_instagram_click')}
       >
         <Instagram className="nav-instagram-icon" aria-hidden />
         <span className="nav-instagram-sep" aria-hidden>
