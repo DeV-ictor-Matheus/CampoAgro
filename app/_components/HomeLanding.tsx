@@ -1,6 +1,5 @@
 import AreasSection from './home/AreasSection';
 import AttractionsSection from './home/AttractionsSection';
-import ContactSection from './home/ContactSection';
 import CountdownSection from './home/CountdownSection';
 import ExpositoresSection from './home/ExpositoresSection';
 import HeroSection from './home/HeroSection';
@@ -14,7 +13,6 @@ import RevealOnScroll from './home/RevealOnScroll';
 import SiteFooter from './home/SiteFooter';
 import ShowsSection from './home/ShowsSection';
 import SobreSection from './home/SobreSection';
-import TratoracoSection from './home/TratoracoSection';
 import WhatsAppFloat from './home/WhatsAppFloat';
 
 export default function HomeLanding() {
@@ -32,11 +30,9 @@ export default function HomeLanding() {
         <ShowsSection />
         <AreasSection />
         <ProgramacaoSection />
-        <TratoracoSection />
         <ExpositoresSection />
-        <PatrocinadoresSection />
         <MemoriasSection />
-        <ContactSection />
+        <PatrocinadoresSection />
       </main>
       <SiteFooter />
       <RevealOnScroll />

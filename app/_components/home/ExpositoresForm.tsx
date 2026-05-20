@@ -12,6 +12,7 @@ import {
   type PatrocinioValue,
 } from '@/lib/leads/types';
 
+import { useClarityTrack } from '@/hooks/useClarityTrack';
 import InterestPicker from './InterestPicker';
 
 type FormState = {
@@ -89,6 +90,7 @@ export default function ExpositoresForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [feedback, setFeedback] = useState('');
   const [manualWhatsAppUrl, setManualWhatsAppUrl] = useState<string | null>(null);
+  const track = useClarityTrack();
 
   useEffect(() => {
     const fromQuery = searchParams.get('interesse');
@@ -169,6 +171,7 @@ export default function ExpositoresForm() {
 
   function selectInteresse(interesse: InteresseValue) {
     updateField('interesse', interesse);
+    track(`cta_${interesse}_click`);
   }
 
   function renderFormStatus(visible: boolean) {
@@ -220,6 +223,8 @@ export default function ExpositoresForm() {
       }
 
       const submittedEmail = form.email;
+
+      track('form_lead_submit', { interesse: form.interesse });
 
       resetFormAfterSubmit();
       setStatus('success');

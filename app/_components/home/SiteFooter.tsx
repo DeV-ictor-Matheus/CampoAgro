@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import CookiePrefsButton from '@/app/_components/consent/CookiePrefsButton';
+
 export default function SiteFooter() {
   return (
     <footer className="premium-footer">
@@ -27,7 +29,6 @@ export default function SiteFooter() {
           <h3>Participe</h3>
           <a href="#expositores">Expositores</a>
           <a href="#patrocinadores">Patrocinadores</a>
-          <a href="#contato">Contato</a>
           <a href="https://www.instagram.com/campoagrooficial/" target="_blank" rel="noopener">
             Instagram oficial
           </a>
@@ -41,7 +42,15 @@ export default function SiteFooter() {
           </p>
         </div>
       </div>
-      <div className="footer-bottom">© 2026 CampoAgro. Todos os direitos reservados.</div>
+      <div className="footer-bottom">
+        © 2026 CampoAgro. Todos os direitos reservados.
+        {' · '}
+        <a href="/privacidade" style={{ color: 'inherit', opacity: 0.6, textDecoration: 'underline' }}>
+          Privacidade
+        </a>
+        {' · '}
+        <CookiePrefsButton />
+      </div>
     </footer>
   );
 }

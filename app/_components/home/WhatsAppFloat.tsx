@@ -1,3 +1,4 @@
+import TrackLink from '@/app/_components/analytics/TrackLink';
 import { getWhatsAppNumber } from '@/lib/leads/config';
 
 function WhatsAppIcon() {
@@ -17,14 +18,15 @@ export default function WhatsAppFloat() {
   const phone = getWhatsAppNumber();
 
   return (
-    <a
+    <TrackLink
       href={`https://wa.me/${phone}`}
       className="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
+      trackEvent="social_whatsapp_click"
     >
       <WhatsAppIcon />
-    </a>
+    </TrackLink>
   );
 }

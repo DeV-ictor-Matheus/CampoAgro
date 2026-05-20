@@ -47,7 +47,7 @@ const AREAS = [
       description:
         'Um ambiente estratégico para relacionamento comercial, visibilidade de marca e novas oportunidades no agronegócio.',
       bullets: ['Expositores', 'Networking', 'Geração de relacionamento e vendas'],
-      cta: { label: 'Falar com a organização', href: '#contato' },
+      cta: { label: 'Falar com a organização', href: '#expositores' },
     },
   },
   {
