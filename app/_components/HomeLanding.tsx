@@ -26,9 +26,9 @@ export default function HomeLanding() {
         <CountdownSection />
         <SobreSection />
         <AttractionsSection />
+        <AreasSection />
         <ShowsSection />
         <ExpositoresSection />
-        <AreasSection />
         <PatrocinadoresSection />
         <MapaSection />
         <MemoriasSection />
