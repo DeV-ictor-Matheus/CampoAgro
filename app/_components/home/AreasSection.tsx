@@ -112,11 +112,11 @@ export default function AreasSection() {
 
         <div className="areas-flow">
           {AREAS.map((area) => (
-            <EventAreaCard key={area.number} {...area} onOpen={setOpen} />
+            <EventAreaCard key={area.number} {...area} />
           ))}
         </div>
       </div>
-      <InfoModal content={open} onClose={() => setOpen(null)} />
     </section>
+
   );
 }
