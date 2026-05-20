@@ -8,20 +8,19 @@ import { useEffect, useRef, useState } from 'react';
 const HASH_LINK_SECTION_IDS = [
   'sobre',
   'atracoes',
-  'shows',
+  'areas',
   'expositores',
-  'mapa',
   'memorias',
   'contato',
 ] as const;
 
-const SECTION_GAP_PX = 14;
+const SECTION_GAP_PX = 28;
 const SPY_TOLERANCE_PX = 18;
 
 function getNavScrollOffset(): number {
   const nav = document.getElementById('navbar');
-  if (!nav) return 94;
-  return Math.ceil(nav.getBoundingClientRect().bottom) + SECTION_GAP_PX;
+  if (!nav) return 112;
+  return Math.ceil(nav.getBoundingClientRect().height) + SECTION_GAP_PX;
 }
 
 function getSectionAnchor(section: HTMLElement): HTMLElement {
@@ -139,8 +138,8 @@ export default function Navbar() {
         {[
           ['sobre', 'O evento'],
           ['atracoes', 'Atrações'],
+          ['areas', 'Estrutura'],
           ['expositores', 'Expositores'],
-          ['mapa', 'Mapa'],
           ['memorias', 'Memória'],
           ['contato', 'Contato'],
         ].map(([id, label]) => (

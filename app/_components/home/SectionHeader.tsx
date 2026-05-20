@@ -7,7 +7,7 @@ type SectionHeaderProps = {
 
 export default function SectionHeader({ badge, title, description, className }: SectionHeaderProps) {
   return (
-    <div className={`section-head split-head reveal ${className ?? ''}`}>
+    <div className={`section-head split-head reveal ${description ? '' : 'section-head--compact'} ${className ?? ''}`}>
       <div>
         <div className="section-badge">{badge}</div>
         <h2 className="section-title">{title}</h2>

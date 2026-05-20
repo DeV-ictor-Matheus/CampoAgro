@@ -5,7 +5,6 @@ import CountdownSection from './home/CountdownSection';
 import ExpositoresSection from './home/ExpositoresSection';
 import HeroSection from './home/HeroSection';
 import LoadingOverlay from './home/LoadingOverlay';
-import MapaSection from './home/MapaSection';
 import MemoriasSection from './home/MemoriasSection';
 import Navbar from './home/Navbar';
 import PatrocinadoresSection from './home/PatrocinadoresSection';
@@ -23,14 +22,13 @@ export default function HomeLanding() {
       <Navbar />
       <main>
         <HeroSection />
-        <CountdownSection />
         <SobreSection />
+        <CountdownSection />
         <AttractionsSection />
-        <AreasSection />
         <ShowsSection />
+        <AreasSection />
         <ExpositoresSection />
         <PatrocinadoresSection />
-        <MapaSection />
         <MemoriasSection />
         <ContactSection />
       </main>

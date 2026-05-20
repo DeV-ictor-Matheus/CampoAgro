@@ -108,10 +108,9 @@ export default function AreasSection() {
               Estrutura completa para viver o <span className="highlight">CampoAgro</span>
             </>
           }
-          description="Uma estrutura pensada para receber produtores, visitantes, marcas, famílias e parceiros em diferentes ambientes do evento."
         />
 
-        <div className="areas-grid areas-grid--premium">
+        <div className="areas-flow">
           {AREAS.map((area) => (
             <EventAreaCard key={area.number} {...area} onOpen={setOpen} />
           ))}
