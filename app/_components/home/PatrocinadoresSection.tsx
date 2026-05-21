@@ -13,7 +13,11 @@ export default function PatrocinadoresSection() {
               Marcas e instituições que fortalecem o <span className="highlight">CampoAgro</span>
             </h2>
           </div>
-          <TrackLink href="#expositores" className="btn-primary" trackEvent="patrocinador_cota_click">
+          <TrackLink
+            href="?interesse=patrocinador#expositores"
+            className="btn-primary"
+            trackEvent="patrocinador_cota_click"
+          >
             Ver cotas premium
           </TrackLink>
         </div>
