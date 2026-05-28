@@ -91,3 +91,4 @@ Eventos customizados: `useClarityTrack()` em `hooks/useClarityTrack.ts`.
 ## Licença
 
 © 2026 CampoAgro · Prefeitura de Campo do Tenente · Todos os direitos reservados.
+
