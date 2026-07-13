@@ -88,7 +88,7 @@ Para métricas fiéis, medir com `npm run build && npm run start` ou preview de 
 
 Eventos customizados: `useClarityTrack()` em `hooks/useClarityTrack.ts`.
 
-Projeto colaborativo: design inicial por @Luizinkk, desenvolvimento da aplicação completa (Next.js, TypeScript, integrações e funcionalidades) por mim.
+Projeto colaborativo: design inicial por @Luizinnk, desenvolvimento da aplicação completa (Next.js, TypeScript, integrações e funcionalidades) por mim.
 
 ## Licença
 
